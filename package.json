@@ -3,10 +3,11 @@
   "scripts": {
     "install": "bower install",
     "lint": "jshint --reporter node_modules/jshint-stylish/stylish.js .",
-    "karma": "./node_modules/karma/bin/karma start",
     "clean": "[ ! -e tests/coverage ] || rm -rf tests/coverage",
     "report": "cat tests/coverage/summary.txt && echo",
-    "test": "npm run lint && npm run clean && CI=true gulp test && npm run report"
+    "test": "npm run lint && npm run clean && CI=true gulp test && npm run report",
+    "build": "gulp build",
+    "deploy": "./ftp-deploy.sh dist ftp.amercier.com /badges"
   },
   "dependencies": {},
   "devDependencies": {

@@ -11,5 +11,4 @@ env:
 sudo: false
 after_success:
 - codeclimate < tests/coverage/report.lcov
-- gulp build
-- ./ftp-deploy.sh dist ftp.amercier.com /badges
+- test "$TRAVIS_PULL_REQUEST" == false && npm run build && npm run deploy
