@@ -21,7 +21,7 @@ class MainCtrl {
     BadgeService.parseUrl = function(url, noCache) {
       var parsed = BadgeService.parseTemplate(url);
       if (noCache) {
-        parsed += (url.indexOf('?') === -1 ? '?' : '&') + new Date().getTime();
+        parsed += (url.indexOf('?') === -1 ? '?' : '&') + Math.floor(new Date().getTime() / 1000);
       }
       return parsed;
     };
