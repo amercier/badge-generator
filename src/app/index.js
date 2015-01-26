@@ -6,7 +6,7 @@ import MainCtrl from './main/main.controller';
 angular.module('badgeGenerator', ['ngAnimate', 'ngResource', 'ui.router', 'ngMaterial'])
   .controller('MainCtrl', MainCtrl)
 
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
       .state('home', {
         url: '/',
@@ -15,5 +15,7 @@ angular.module('badgeGenerator', ['ngAnimate', 'ngResource', 'ui.router', 'ngMat
       });
 
     $urlRouterProvider.otherwise('/');
+
+    $locationProvider.html5Mode(true).hashPrefix('!');
   })
 ;
