@@ -9,14 +9,14 @@ describe('controllers', function(){
     scope = $rootScope.$new();
   }));
 
-  it('should define more than 5 awesome things', inject(function($controller) {
+  it('should define more than 10 services', inject(function($controller) {
     expect(scope.awesomeThings).toBeUndefined();
 
     $controller('MainCtrl', {
       $scope: scope
     });
 
-    expect(angular.isArray(scope.awesomeThings)).toBeTruthy();
-    expect(scope.awesomeThings.length > 5).toBeTruthy();
+    expect(angular.isArray(scope.services)).toBeTruthy();
+    expect(scope.services.length > 5).toBeTruthy();
   }));
 });

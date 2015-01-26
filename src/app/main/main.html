@@ -1,35 +1,53 @@
-<div layout="vertical" layout-fill>
+<div layout="column" layout-align="start space-around" layout-margin layout-padding>
 
-  <header ng-include="'components/navbar/navbar.html'"></header>
-
-  <md-content>
-    <section class="jumbotron">
-      <h1>'Allo, 'Allo!</h1>
-      <p class="lead">
-        <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
-      </p>
-      <p><a class="btn" ng-href="#">Splendid!</a></p>
-    </section>
-
-    <div class="techs" layout-align="center">
-      <md-card ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
-        <div class="thumbnail">
-          <img class="pull-right" ng-src="assets/images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
-          <div class="caption">
-            <h3>{{awesomeThing.title}}</h3>
-            <p>{{awesomeThing.description}}</p>
-            <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a></p>
-          </div>
-        </div>
-      </md-card>
-    </div>
+  <md-content class="md-padding">
+    <h1>GitHub Badge Generator</h1>
   </md-content>
 
-  <footer>
-    <md-toolbar layout="row" layout-align="center center">
-      <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
-    </md-toolbar>
-  </footer>
+  <md-whiteframe class="badges-settings md-whiteframe-z1" layout="column" layout-margin layout-padding>
+    <form name="badgesForm">
 
+      <md-input-container flex>
+        <label>Repository</label>
+        <input ng-model="data.repository" name="repository" required>
+      </md-input-container>
+      <div ng-messages="badgesForm.rate.$error">
+      </div>
+
+      <div layout="row">
+
+        <md-radio-group flex="75">
+          <label>Services</label>
+          <div class="badges-services" layout="row" layout-wrap>
+            <md-checkbox ng-repeat="s in data.services" ng-model="s.selected">
+              {{s.service.name}}
+            </md-checkbox>
+          </div>
+        </md-radio-group>
+
+        <md-radio-group ng-model="data.style" flex="25">
+          <label>Style</label>
+          <md-radio-button value="default">Default</md-radio-button>
+          <md-radio-button value="flat">Flat</md-radio-button>
+          <md-radio-button value="flat-square">Flat Square</md-radio-button>
+        </md-radio-group>
+
+      </div>
+
+    </form>
+  </md-whiteframe>
+
+  <md-whiteframe class="badges-result md-whiteframe-z1" layout="column" layout-margin layout-padding ng-if="data.repository">
+
+    <h4>Preview</h4>
+    <p class="badges-preview">
+      <a ng-repeat="s in getSelectedServices()" ng-href="{{ s.getUrl() }}" class="badges-badge">
+        <img ng-src="{{ s.getImageUrl() }}"/>
+      </a>
+    </p>
+
+    <h4>Source</h4>
+    <pre class="badges-source">{{ getMarkDown() }}</pre>
+
+  </md-whiteframe>
 </div>
