@@ -26,12 +26,12 @@ class MainCtrl {
       return parsed;
     };
 
-    BadgeService.prototype.getUrl = function() {
-      return BadgeService.parseUrl(this.url);
+    BadgeService.prototype.getUrl = function(noCache) {
+      return BadgeService.parseUrl(this.url, noCache);
     };
 
-    BadgeService.prototype.getImageUrl = function() {
-      return BadgeService.parseUrl(this.imageUrl, true);
+    BadgeService.prototype.getImageUrl = function(noCache) {
+      return BadgeService.parseUrl(this.imageUrl, noCache);
     };
 
     BadgeService.prototype.getMarkDown = function() {

@@ -42,7 +42,7 @@
     <h4>Preview</h4>
     <p class="badges-preview">
       <a ng-repeat="s in getSelectedServices()" ng-href="{{ s.getUrl() }}" class="badges-badge">
-        <img ng-src="{{ s.getImageUrl() }}"/>
+        <img ng-src="{{ s.getImageUrl(true) }}"/>
       </a>
     </p>
 
