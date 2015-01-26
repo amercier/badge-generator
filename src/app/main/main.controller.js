@@ -76,6 +76,12 @@ class MainCtrl {
         title: 'Dependency Status'
       }),
       new BadgeService({
+        name: 'VersionEye',
+        url: 'https://www.versioneye.com/user/projects/{repository}',
+        imageUrl: 'https://www.versioneye.com/user/projects/{repository}/badge.svg?style={style}',
+        title: 'Dependency Status'
+      }),
+      new BadgeService({
         name: 'David DM',
         url: 'https://david-dm.org/{repository}',
         imageUrl: 'https://img.shields.io/david/{repository}.svg?style={style}',
