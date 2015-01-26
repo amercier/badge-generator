@@ -108,7 +108,7 @@ class MainCtrl {
     ];
 
     $scope.data = {
-      repository: 'amercier/oeco',
+      repository: '',
       branch: 'master',
       style: 'flat-square',
       services: $scope.services.map(function(service) {
