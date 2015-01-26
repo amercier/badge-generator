@@ -19,7 +19,7 @@
         <md-radio-group flex="75">
           <label>Services</label>
           <div class="badges-services" layout="row" layout-wrap>
-            <md-checkbox ng-repeat="s in data.services" ng-model="s.selected">
+            <md-checkbox ng-repeat="s in data.services" ng-model="s.selected" aria-label="{{s.service.name}}">
               {{s.service.name}}
             </md-checkbox>
           </div>
