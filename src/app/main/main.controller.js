@@ -55,7 +55,7 @@ class MainCtrl {
         name: 'Code Climate',
         url: 'https://codeclimate.com/github/{repository}',
         imageUrl: 'https://img.shields.io/codeclimate/github/{repository}.svg?style={style}',
-        title: 'Build Status'
+        title: 'Code Climate'
       }),
       new BadgeService({
         name: 'Code Climate (code coverage)',
