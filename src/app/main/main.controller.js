@@ -110,6 +110,12 @@ class MainCtrl {
         url: 'https://www.npmjs.com/package/{repository}',
         imageUrl: 'https://img.shields.io/npm/v/{repository}.svg?style={style}',
         title: 'Latest Stable Version'
+      }),
+      new BadgeService({
+        name: 'Bower',
+        url: 'http://bower.io/search/?q={repository}',
+        imageUrl: 'https://img.shields.io/bower/v/{repository}.svg?style={style}',
+        title: 'Latest Stable Version'
       })
     ];
 
