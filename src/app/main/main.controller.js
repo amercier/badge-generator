@@ -126,7 +126,7 @@ class MainCtrl {
       services: $scope.services.map(function(service) {
         return {
           service: service,
-          selected: true
+          selected: false
         };
       })
     };
