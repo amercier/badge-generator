@@ -112,6 +112,12 @@ class MainCtrl {
         title: 'Latest Stable Version'
       }),
       new BadgeService({
+        name: 'NPM Downloads',
+        url: 'https://www.npmjs.com/package/{repository}',
+        imageUrl: 'https://img.shields.io/npm/dm/{repository}.svg?style={style}',
+        title: 'NPM Downloads'
+      }),
+      new BadgeService({
         name: 'Bower',
         url: 'http://bower.io/search/?q={repository}',
         imageUrl: 'https://img.shields.io/bower/v/{repository}.svg?style={style}',
