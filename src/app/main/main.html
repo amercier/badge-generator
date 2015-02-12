@@ -28,7 +28,7 @@
         <md-radio-group ng-model="data.style" flex="25">
           <label>Style</label>
           <md-radio-button value="default">Default</md-radio-button>
-          <md-radio-button value="flat">Flat</md-radio-button>
+          <md-radio-button value="plastic">Plastic</md-radio-button>
           <md-radio-button value="flat-square">Flat Square</md-radio-button>
         </md-radio-group>
 
@@ -42,7 +42,7 @@
     <h4>Preview</h4>
     <p class="badges-preview">
       <a ng-repeat="s in getSelectedServices()" ng-href="{{ s.getUrl() }}" class="badges-badge">
-        <img ng-src="{{ s.getImageUrl(true) }}"/>
+        <img ng-src="{{ s.getImageUrl(data.style, true) }}"/>
       </a>
     </p>
 
