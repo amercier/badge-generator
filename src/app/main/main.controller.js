@@ -39,6 +39,18 @@ class MainCtrl {
 
     $scope.services = [
       new BadgeService({
+        name: 'GitHub forks',
+        url: 'https://github.com/{repository}',
+        imageUrl: 'https://img.shields.io/github/forks/{repository}.svg',
+        title: 'Build Status'
+      }),
+      new BadgeService({
+        name: 'GitHub stars',
+        url: 'https://github.com/{repository}',
+        imageUrl: 'https://img.shields.io/github/stars/{repository}.svg',
+        title: 'Build Status'
+      }),
+      new BadgeService({
         name: 'Travis CI',
         url: 'https://travis-ci.org/{repository}',
         imageUrl: 'https://img.shields.io/travis/{repository}/{branch}.svg',
