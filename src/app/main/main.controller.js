@@ -81,6 +81,12 @@ class MainCtrl {
         title: 'Test Coverage'
       }),
       new BadgeService({
+        name: 'Codecov',
+        url: 'https://codecov.io/github/{repository}?branch={branch}',
+        imageUrl: 'https://img.shields.io/codecov/c/github/{repository}/{branch}.svg',
+        title: 'Test Coverage'
+      }),
+      new BadgeService({
         name: 'Gemnasium',
         url: 'https://gemnasium.com/{repository}',
         imageUrl: 'http://img.shields.io/gemnasium/{repository}.svg',
