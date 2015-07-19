@@ -54,7 +54,7 @@ module.exports = function(config) {
     },
 
     // Browsers
-    browsers : isContinuousIntegration ? ['PhantomJS', 'chrome-travis-ci'] : ['PhantomJS', 'Chrome'],
+    browsers : ['PhantomJS', 'Firefox', isContinuousIntegration ? 'chrome-travis-ci' : 'Chrome'],
     customLaunchers: {
       'PhantomJS_debug': {
         base: 'PhantomJS',
