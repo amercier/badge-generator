@@ -1,8 +1,9 @@
 'use strict';
 /*jshint esnext: true */
 
-class MainCtrl {
+class MainController {
   constructor ($scope) {
+    'ngInject';
 
     function BadgeService(config) {
       this.name = config.name;
@@ -168,6 +169,4 @@ class MainCtrl {
   }
 }
 
-MainCtrl.$inject = ['$scope'];
-
-export default MainCtrl;
+export default MainController;
