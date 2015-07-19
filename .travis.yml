@@ -10,5 +10,5 @@ env:
   - secure: REdUnayV5qdFAPRi0D/iSDQ6IEW4upf1EELmjO2rxHl+yCV75J8iASjYspQkHqynAJLW+FZb3AYj+T5aql35jsTvqBYdzbspQbXyvmDHi9mSMKc6G/DUHK9/3q8SlislT5xdEkddu7uIIMmkjnV6NXJaGEZePOeasS2MxG5zE9U=
 sudo: false
 after_success:
-- codeclimate < tests/coverage/report.lcov
+- codeclimate < coverage/lcov.info
 - test "$TRAVIS_PULL_REQUEST" = "false" && test "$TRAVIS_BRANCH" = "master" && npm run build && npm run deploy
