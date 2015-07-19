@@ -1,9 +1,8 @@
 'use strict';
 /*jshint esnext: true */
 
-function runBlock ($log) {
+function runBlock () {
   'ngInject';
-  $log.debug('runBlock end');
 }
 
 export default runBlock;
