@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {},
   "scripts": {
-    "install": "bower install",
+    "install": "bower install --force-latest",
     "lint": "jshint --reporter node_modules/jshint-stylish .",
     "test": "npm run lint && rm -rf coverage && CI=true gulp test",
     "start": "gulp serve",
