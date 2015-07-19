@@ -1,6 +1,5 @@
 {
-  "name": "badgeGenerator",
-  "version": "0.0.0",
+  "private": true,
   "dependencies": {},
   "scripts": {
     "install": "bower install --force-latest",
