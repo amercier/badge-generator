@@ -47,9 +47,8 @@ module.exports = function(config) {
     reporters: process.env.CI ? ['coverage', 'dots'] : ['progress'],
     coverageReporter: !isContinuousIntegration ? {} : {
       reporters: [
-        { subdir: '.', type: 'html' },
-        { subdir: '.', type: 'lcovonly' },
-        { type: 'text-summary' }
+        { type: 'json' },
+        { type: 'html' }
       ]
     },
 

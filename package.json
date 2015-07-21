@@ -4,7 +4,7 @@
   "scripts": {
     "install": "bower install --force-latest",
     "lint": "jshint --reporter node_modules/jshint-stylish .",
-    "test": "npm run lint && rm -rf coverage && CI=true gulp test",
+    "test": "npm run lint && rm -rf coverage && CI=true gulp test && istanbul report lcovonly html text-summary",
     "start": "gulp serve",
     "build": "gulp build",
     "deploy": "./ftp-deploy.sh dist ftp.amercier.com /badges"
@@ -41,6 +41,7 @@
     "gulp-uglify": "~1.2.0",
     "gulp-useref": "~1.2.0",
     "gulp-util": "~3.0.5",
+    "istanbul": "^0.3.17",
     "jasmine-core": "^2.3.4",
     "jshint": "^2.8.0",
     "jshint-loader": "~0.8.3",
