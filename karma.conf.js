@@ -43,6 +43,19 @@ module.exports = function(config) {
       moduleName: 'badgeGenerator'
     },
 
+    // Browsers
+    browsers: isContinuousIntegration ? ['PhantomJS', 'ChromeTravisCI', 'Firefox'] : ['PhantomJSDebug'],
+    customLaunchers: {
+      PhantomJSDebug: {
+        base: 'PhantomJS',
+        debug: true
+      },
+      ChromeTravisCI: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
+
     // Reporters
     reporters: process.env.CI ? ['coverage', 'dots'] : ['progress'],
     coverageReporter: {
@@ -50,28 +63,6 @@ module.exports = function(config) {
         { type: 'json' },
         { type: 'html' }
       ]
-    },
-
-    // Browsers
-    browsers : ['PhantomJS', 'Firefox', isContinuousIntegration ? 'chrome-travis-ci' : 'Chrome'],
-    customLaunchers: {
-      'PhantomJS_debug': {
-        base: 'PhantomJS',
-        options: {
-          windowName: 'Custom PhantomJS',
-          settings: {
-            webSecurityEnabled: false
-          }
-        },
-        flags: [
-          '--remote-debugger-port=9000',
-          '--remote-debugger-autorun=yes'
-        ]
-      },
-      'chrome-travis-ci': {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
     }
   });
 };
