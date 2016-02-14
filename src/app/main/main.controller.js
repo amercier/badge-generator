@@ -66,7 +66,7 @@ class MainController {
       new BadgeService({
         name: 'CodeShip',
         url: 'https://codeship.com/projects/{repository}',
-        imageUrl: 'https://img.shields.io/codeship/{repository}/{branch}.svg',
+        imageUrl: 'https://circleci.com/gh/{repository}.svg?style=svg',
         title: 'Build Status'
       }),
       new BadgeService({
