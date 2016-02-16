@@ -146,6 +146,12 @@ class MainController {
         url: 'http://bower.io/search/?q={repository}',
         imageUrl: 'https://img.shields.io/bower/v/{repository}.svg',
         title: 'Latest Stable Version'
+      }),
+      new BadgeService({
+        name: 'ESDoc',
+        url: 'https://doc.esdoc.org/github.com/{repository}/',
+        imageUrl: 'https://doc.esdoc.org/github.com/{repository}/badge.svg',
+        title: 'API Documentation'
       })
     ];
 
