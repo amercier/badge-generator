@@ -136,7 +136,13 @@ class MainController {
         title: 'Latest Stable Version'
       }),
       new BadgeService({
-        name: 'NPM Downloads',
+        name: 'NPM License',
+        url: 'https://www.npmjs.com/package/{repository}',
+        imageUrl: 'https://img.shields.io/npm/l/{repository}.svg',
+        title: 'License'
+      }),
+      new BadgeService({
+        name: 'NPM Total Downloads',
         url: 'https://www.npmjs.com/package/{repository}',
         imageUrl: 'https://img.shields.io/npm/dt/{repository}.svg',
         title: 'NPM Downloads'
