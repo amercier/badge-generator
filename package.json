@@ -49,7 +49,7 @@
     "jshint-stylish": "~2.0.0",
     "karma": "~0.13.21",
     "karma-chrome-launcher": "^0.2.0",
-    "karma-coverage": "^0.4.2",
+    "karma-coverage": "^0.5.4",
     "karma-firefox-launcher": "^0.1.6",
     "karma-jasmine": "~0.3.5",
     "karma-ng-html2js-preprocessor": "~0.2.1",
