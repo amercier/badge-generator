@@ -20,7 +20,7 @@ class MainController {
     $scope.data.services = $scope.services.map(service => ({ service, selected: false }));
 
     $scope.formats = formatsConfig;
-    $scope.data.format = $scope.formats[0];
+    $scope.data.format = $scope.formats.filter(f => f.default)[0];
 
     $scope.getSelectedServices = function() {
       return $scope.data.services
