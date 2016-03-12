@@ -12,7 +12,7 @@ export default [
   {
     name: 'Markdown',
     template: (title, url, img) => `[![${title}](${img})](${url})`,
-    default: true
+    default: false
   },
   {
     name: 'Org Mode',
