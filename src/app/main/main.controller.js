@@ -164,6 +164,12 @@ class MainController {
         url: 'https://doc.esdoc.org/github.com/{repository}/',
         imageUrl: 'https://doc.esdoc.org/github.com/{repository}/badge.svg',
         title: 'API Documentation'
+      }),
+      new BadgeService({
+        name: 'Melpa',
+        url: 'http://melpa.org/#/{repository}/',
+        imageUrl: 'http://melpa.org/packages/{repository}-badge.svg',
+        title: 'MELPA'
       })
     ];
 
