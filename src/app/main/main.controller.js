@@ -1,7 +1,8 @@
 'use strict';
 /*jshint esnext: true */
 
-import config from './config';
+import servicesConfig from './services.config';
+import formatsConfig from './formats.config';
 import BadgeService from './badge-service';
 
 class MainController {
@@ -15,8 +16,11 @@ class MainController {
       services: []
     };
 
-    $scope.services = config.map(service => new BadgeService(service, $scope.data));
+    $scope.services = servicesConfig.map(service => new BadgeService(service, $scope.data));
     $scope.data.services = $scope.services.map(service => ({ service, selected: false }));
+
+    $scope.formats = formatsConfig;
+    $scope.data.format = $scope.formats.filter(f => f.default)[0];
 
     $scope.getSelectedServices = function() {
       return $scope.data.services
@@ -24,9 +28,13 @@ class MainController {
         .map(function(s) { return s.service; });
     };
 
-    $scope.getMarkDown = function() {
+    $scope.getSource = function() {
       return $scope.getSelectedServices()
-        .map(function(s) { return s.getMarkDown($scope.data.style); })
+        .map(service => $scope.data.format.template(
+          service.title,
+          service.getUrl(),
+          service.getImageUrl($scope.data.style)
+        ))
         .join('\n') + '\n\n';
     };
   }
