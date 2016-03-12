@@ -28,8 +28,4 @@ export default class BadgeService {
   getImageUrl(style, noCache) {
     return BadgeService.parseUrl(this.imageUrl + (style === 'default' ? '' : '?style=' + style), this.data, noCache);
   }
-
-  getMarkDown(style) {
-    return '[![' + this.title + '](' + this.getImageUrl(style) + ')](' + this.getUrl() + ')';
-  }
 }

@@ -46,8 +46,13 @@
       </a>
     </p>
 
-    <h4>Source</h4>
-    <pre class="badges-source">{{ getMarkDown() }}</pre>
+    <md-input-container>
+      <label>Source</label>
+      <md-select ng-model="data.format">
+        <md-option ng-value="f" ng-repeat="f in formats">{{ f.name }}</md-option>
+      </md-select>
+    </md-input-container>
+    <pre class="badges-source">{{ getSource() }}</pre>
 
   </md-whiteframe>
 </div>
