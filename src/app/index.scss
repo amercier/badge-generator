@@ -6,6 +6,20 @@
 // endbower
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+body {
+  background: #f2f2f2;
+  margin: 0;
+  padding: 1px 0;
+}
+
+md-content {
+  background: transparent;
+}
+
+md-whiteframe,
+.md-select-menu-container {
+  background: white;
+}
 
 .badges-badge {
   display: inline-block;
