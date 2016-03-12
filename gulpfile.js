@@ -1,5 +1,3 @@
-/* jshint node: true */
-
 /**
  *  Welcome to your gulpfile!
  *  The gulp tasks are splitted in several files in the gulp directory

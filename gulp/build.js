@@ -8,7 +8,7 @@ var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
 });
 
-gulp.task('partials', function () {
+gulp.task('partials', ['markups'], function () {
   return gulp.src([
     path.join(conf.paths.src, '/app/**/*.html'),
     path.join(conf.paths.tmp, '/serve/app/**/*.html')
@@ -19,7 +19,7 @@ gulp.task('partials', function () {
       quotes: true
     }))
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
-      module: 'badgeGenerator',
+      module: 'generatorGulpAngularPlayground',
       root: 'app'
     }))
     .pipe(gulp.dest(conf.paths.tmp + '/partials/'));
@@ -36,18 +36,24 @@ gulp.task('html', ['inject', 'partials'], function () {
   var htmlFilter = $.filter('*.html', { restore: true });
   var jsFilter = $.filter('**/*.js', { restore: true });
   var cssFilter = $.filter('**/*.css', { restore: true });
+  var assets;
 
   return gulp.src(path.join(conf.paths.tmp, '/serve/*.html'))
     .pipe($.inject(partialsInjectFile, partialsInjectOptions))
-    .pipe(jsFilter)
-    .pipe($.ngAnnotate())
-    .pipe($.uglify({ preserveComments: $.uglifySaveLicense })).on('error', conf.errorHandler('Uglify'))
+    .pipe(assets = $.useref.assets())
     .pipe($.rev())
+    .pipe(jsFilter)
+    .pipe($.sourcemaps.init())
+    .pipe($.uglify({ preserveComments: $.uglifySaveLicense })).on('error', conf.errorHandler('Uglify'))
+    .pipe($.sourcemaps.write('maps'))
     .pipe(jsFilter.restore)
     .pipe(cssFilter)
-    .pipe($.csso())
-    .pipe($.rev())
+    .pipe($.sourcemaps.init())
+    .pipe($.replace('../../bower_components/material-design-iconfont/iconfont/', '../fonts/'))
+    .pipe($.minifyCss({ processImport: false }))
+    .pipe($.sourcemaps.write('maps'))
     .pipe(cssFilter.restore)
+    .pipe(assets.restore())
     .pipe($.useref())
     .pipe($.revReplace())
     .pipe(htmlFilter)
@@ -60,12 +66,12 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe(htmlFilter.restore)
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')))
     .pipe($.size({ title: path.join(conf.paths.dist, '/'), showFiles: true }));
-});
+  });
 
 // Only applies for fonts from bower dependencies
 // Custom fonts are handled by the "other" task
 gulp.task('fonts', function () {
-  return gulp.src($.mainBowerFiles())
+  return gulp.src($.mainBowerFiles().concat('bower_components/material-design-iconfont/iconfont/*'))
     .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
     .pipe($.flatten())
     .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
@@ -84,8 +90,8 @@ gulp.task('other', function () {
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')));
 });
 
-gulp.task('clean', function (done) {
-  $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')], done);
+gulp.task('clean', function () {
+  return $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')]);
 });
 
 gulp.task('build', ['html', 'fonts', 'other']);

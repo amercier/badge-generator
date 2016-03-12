@@ -1,4 +1,4 @@
-export default [
+export const servicesConfig = [
   {
     name: 'GitHub forks',
     url: 'https://github.com/{repository}',
