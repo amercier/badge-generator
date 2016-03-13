@@ -9,9 +9,9 @@ var browserSync = require('browser-sync');
 var $ = require('gulp-load-plugins')();
 
 // Downloads the selenium webdriver
-gulp.task('webdriver-update', $.protractor.webdriver_update); // jshint ignore:line
+gulp.task('webdriver-update', $.protractor.webdriver_update);
 
-gulp.task('webdriver-standalone', $.protractor.webdriver_standalone); // jshint ignore:line
+gulp.task('webdriver-standalone', $.protractor.webdriver_standalone);
 
 function runProtractor (done) {
   var params = process.argv;

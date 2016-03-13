@@ -1,11 +1,8 @@
-'use strict';
-/*jshint esnext: true */
+import { servicesConfig } from './services.config';
+import { formatsConfig } from './formats.config';
+import { BadgeService } from './badge-service';
 
-import servicesConfig from './services.config';
-import formatsConfig from './formats.config';
-import BadgeService from './badge-service';
-
-class MainController {
+export class MainController {
   constructor ($scope) {
     'ngInject';
 
@@ -39,5 +36,3 @@ class MainController {
     };
   }
 }
-
-export default MainController;

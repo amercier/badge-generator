@@ -1,4 +1,4 @@
-export default class BadgeService {
+export class BadgeService {
   constructor(config, data) {
     this.name = config.name;
     this.url = config.url;

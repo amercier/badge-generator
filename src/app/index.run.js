@@ -1,8 +1,3 @@
-'use strict';
-/*jshint esnext: true */
-
-function runBlock () {
+export function runBlock () {
   'ngInject';
 }
-
-export default runBlock;

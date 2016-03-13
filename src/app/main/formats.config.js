@@ -1,6 +1,6 @@
 'use strict';
 
-export default [
+export const formatsConfig = [
   {
     name: 'URL',
     template: (title, url) => `${url}`
