@@ -3,8 +3,7 @@
   "dependencies": {},
   "scripts": {
     "install": "bower install --force-latest",
-    "lint": "eslint .",
-    "test": "npm run lint && rm -rf coverage && CI=true gulp test && istanbul report lcovonly html text-summary",
+    "test": "rm -rf coverage && CI=true gulp test && istanbul report lcovonly html text-summary",
     "start": "gulp serve",
     "build": "gulp build",
     "deploy": "./ftp-deploy.sh dist ftp.amercier.com /badges"
