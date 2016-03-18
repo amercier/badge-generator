@@ -1,5 +1,5 @@
-sudo: false
 language: node_js
+node_js: 4
 env:
   global:
   - secure: LTeizUOW9zSnDFFU7fY1NZ9wl6H2uEUa80rQ+qnfgw61Lix3D1oFnshLy9X//O8PclkSKmJx1x4WHuCRdDX8yeFdQr0svUa3rRkLjUli2m2hIueUA6gGxto80M/I/v5wfROqJwtrejJs6PjgZYiJMJIyoDE5Vl8B5SGR7a1Tp9g=
