@@ -52,7 +52,7 @@
     "karma-coverage": "~0.5.4",
     "karma-firefox-launcher": "~0.1.6",
     "karma-jasmine": "~1.0.0",
-    "karma-ng-html2js-preprocessor": "~0.2.1",
+    "karma-ng-html2js-preprocessor": "~1.0.0",
     "karma-phantomjs-launcher": "~0.2.0",
     "lodash": "~4.11.0",
     "main-bower-files": "~2.13.0",
