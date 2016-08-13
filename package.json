@@ -22,7 +22,7 @@
     "del": "~2.2.1",
     "gulp": "~3.9.0",
     "gulp-angular-templatecache": "~2.0.0",
-    "gulp-autoprefixer": "~2.3.1",
+    "gulp-autoprefixer": "~3.1.1",
     "gulp-csso": "~2.0.0",
     "gulp-filter": "~3.0.1",
     "gulp-flatten": "~0.0.4",
