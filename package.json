@@ -17,7 +17,7 @@
     "browser-sync": "~2.16.0",
     "browser-sync-spa": "~1.0.2",
     "chalk": "~1.0.0",
-    "codeclimate-test-reporter": "~0.3.2",
+    "codeclimate-test-reporter": "~0.4.0",
     "concat-stream": "~1.5.0",
     "del": "~2.2.1",
     "gulp": "~3.9.0",
