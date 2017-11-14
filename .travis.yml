@@ -21,8 +21,12 @@ script:
 - npm run build
 after_success:
 - codeclimate < coverage/lcov.info
-- test "$TRAVIS_PULL_REQUEST" = "false" && test "$TRAVIS_BRANCH" = "master" && npm run build && npm run deploy
 cache:
   directories:
   - bower_components
   - node_modules
+deploy:
+  - provider: script
+    script: npm run build && npm run deploy
+    on:
+      branch: master
