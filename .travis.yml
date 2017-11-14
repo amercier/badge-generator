@@ -26,7 +26,8 @@ cache:
   - bower_components
   - node_modules
 deploy:
-  - provider: script
-    script: npm run build && npm run deploy
-    on:
-      branch: master
+  provider: script
+  skip_cleanup: true
+  script: npm run build && npm run deploy
+  on:
+    branch: master
