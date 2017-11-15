@@ -85,7 +85,7 @@ export default [
   },
   {
     name: 'Packagist',
-    url: 'https://gemnasium.com/{repository}',
+    url: 'https://packagist.org/packages/{repository}',
     imageUrl: 'https://img.shields.io/packagist/v/{repository}.svg',
     title: 'Latest Stable Version'
   },
