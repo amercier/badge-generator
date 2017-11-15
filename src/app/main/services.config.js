@@ -90,6 +90,18 @@ export default [
     title: 'Latest Stable Version'
   },
   {
+    name: 'Packagist PHP version',
+    url: 'https://packagist.org/packages/{repository}',
+    imageUrl: 'https://img.shields.io/packagist/php-v/{repository}.svg',
+    title: 'PHP version'
+  },
+  {
+    name: 'Packagist License',
+    url: 'https://packagist.org/packages/{repository}',
+    imageUrl: 'https://img.shields.io/packagist/l/{repository}.svg',
+    title: 'License'
+  },
+  {
     name: 'NPM',
     url: 'https://www.npmjs.com/package/{repository}',
     imageUrl: 'https://img.shields.io/npm/v/{repository}.svg',
