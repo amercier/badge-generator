@@ -31,8 +31,8 @@ export default [
   },
   {
     name: 'Code Climate',
-    url: 'https://codeclimate.com/github/{repository}',
-    imageUrl: 'https://img.shields.io/codeclimate/github/{repository}.svg',
+    url: 'https://codeclimate.com/maintainability/{repository}',
+    imageUrl: 'https://img.shields.io/codeclimate/maintainability/{repository}.svg',
     title: 'Code Climate'
   },
   {
