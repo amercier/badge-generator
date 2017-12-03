@@ -138,6 +138,12 @@ export default [
     title: 'API Documentation'
   },
   {
+    name: 'Greenkeeper',
+    url: 'https://github.com/{repository}/issues?q=label%3Agreenkeeper',
+    imageUrl: 'https://badges.greenkeeper.io/{repository}.svg',
+    title: 'Greenkeeper'
+  },
+  {
     name: 'Melpa',
     url: 'http://melpa.org/#/{repository}/',
     imageUrl: 'http://melpa.org/packages/{repository}-badge.svg',
