@@ -12,6 +12,12 @@ export default [
     title: 'Build Status'
   },
   {
+    name: 'GitHub license',
+    url: 'https://github.com/{repository}',
+    imageUrl: 'https://img.shields.io/github/license/{repository}.svg',
+    title: 'License'
+  },
+  {
     name: 'Travis CI',
     url: 'https://travis-ci.org/{repository}',
     imageUrl: 'https://img.shields.io/travis/{repository}/{branch}.svg',
