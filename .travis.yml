@@ -25,9 +25,13 @@ cache:
   directories:
   - bower_components
   - node_modules
+before_deploy:
+  - npm run build
 deploy:
-  provider: script
+  provider: pages
+  local-dir: dist
   skip_cleanup: true
-  script: npm run build && npm run deploy
+  github-token: $GITHUB_TOKEN
+  keep-history: true
   on:
     branch: master

@@ -6,8 +6,7 @@
     "lint": "jshint --reporter node_modules/jshint-stylish .",
     "test": "npm run lint && rm -rf coverage && CI=true gulp test && istanbul report lcovonly html text-summary",
     "start": "gulp serve",
-    "build": "gulp build",
-    "deploy": "./ftp-deploy.sh dist ftp.amercier.com /badges"
+    "build": "gulp build"
   },
   "devDependencies": {
     "babel-core": "~6.18.0",
