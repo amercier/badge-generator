@@ -44,14 +44,14 @@ module.exports = function(config) {
     },
 
     // Browsers
-    browsers: isContinuousIntegration ? ['PhantomJS', 'ChromeTravisCI', 'Firefox'] : ['PhantomJSDebug'],
+    browsers: isContinuousIntegration ? ['PhantomJS', 'ChromeHeadlessNoSandbox', 'FirefoxHeadless'] : ['PhantomJSDebug'],
     customLaunchers: {
       PhantomJSDebug: {
         base: 'PhantomJS',
         debug: true
       },
-      ChromeTravisCI: {
-        base: 'Chrome',
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
     },

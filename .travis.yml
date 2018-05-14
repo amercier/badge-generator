@@ -1,26 +1,14 @@
 language: node_js
-node_js: node
+node_js: --lts
 addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
-env:
-  global:
-  - CXX=g++-4.8
-  - secure: LTeizUOW9zSnDFFU7fY1NZ9wl6H2uEUa80rQ+qnfgw61Lix3D1oFnshLy9X//O8PclkSKmJx1x4WHuCRdDX8yeFdQr0svUa3rRkLjUli2m2hIueUA6gGxto80M/I/v5wfROqJwtrejJs6PjgZYiJMJIyoDE5Vl8B5SGR7a1Tp9g=
-  - secure: b+q858M9tChCoGfmDqq8nRtR3r5A0RXDxPK+nHal0RSbsdo/ebahwvq85wfnOukClyv+9bsUSP4hDsmWGGzSZTzAK5UY0nvHCs3v9j5wyCpknq2V6QN9zEaI+RhyFivjtWV86zDegOyO4XOdqkvele2qLZJ3SjUe7O2wMSg7RNM=
-  - secure: REdUnayV5qdFAPRi0D/iSDQ6IEW4upf1EELmjO2rxHl+yCV75J8iASjYspQkHqynAJLW+FZb3AYj+T5aql35jsTvqBYdzbspQbXyvmDHi9mSMKc6G/DUHK9/3q8SlislT5xdEkddu7uIIMmkjnV6NXJaGEZePOeasS2MxG5zE9U=
-before_install:
-  - export CHROME_BIN=chromium-browser
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-script:
-- npm test
-- npm run build
+  chrome: stable
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 after_success:
-- codeclimate < coverage/lcov.info
+  # CC_TEST_REPORTER_ID environment variable must be set in Travis CI project settings
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 cache:
   directories:
   - bower_components
@@ -35,3 +23,7 @@ deploy:
   keep-history: true
   on:
     branch: master
+cache:
+  directories:
+    - $HOME/.npm
+    - $HOME/.cache/bower
