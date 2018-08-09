@@ -36,10 +36,22 @@ export default [
     title: 'Build Status'
   },
   {
-    name: 'Code Climate',
+    name: 'Code Climate (maintainability)',
     url: 'https://codeclimate.com/github/{repository}',
     imageUrl: 'https://img.shields.io/codeclimate/maintainability/{repository}.svg',
-    title: 'Code Climate'
+    title: 'Maintainability'
+  },
+  {
+    name: 'Code Climate (% maintainability)',
+    url: 'https://codeclimate.com/github/{repository}',
+    imageUrl: 'https://img.shields.io/codeclimate/maintainability-percentage/{repository}.svg',
+    title: 'Maintainability'
+  },
+  {
+    name: 'Code Climate (tech debt)',
+    url: 'https://codeclimate.com/github/{repository}',
+    imageUrl: 'https://img.shields.io/codeclimate/tech-debt/{repository}.svg',
+    title: 'Technical Debt'
   },
   {
     name: 'Code Climate (code coverage)',
