@@ -1,3 +1,5 @@
 language: node_js
 node_js: --lts # LTS
 cache: yarn
+install:
+  - yarn install --ignore-scripts # Prevent flow-typed update
