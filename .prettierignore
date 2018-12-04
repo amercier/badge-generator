@@ -1,0 +1,6 @@
+/.*config
+/.*ignore
+/flow-typed
+*.ico
+*.lock
+*.svg
