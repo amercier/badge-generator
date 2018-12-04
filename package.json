@@ -16,6 +16,7 @@
   },
   "scripts": {
     "install": "flow-typed install --overwrite --skip",
+    "lint": "flow",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
