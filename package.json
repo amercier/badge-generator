@@ -7,9 +7,16 @@
     "react-dom": "^16.6.3"
   },
   "devDependencies": {
+    "flow-bin": "^0.87.0",
+    "flow-typed": "^2.5.1",
     "react-scripts": "2.1.1"
   },
+  "peerDependencies": {
+    "jest": "^23.6.0"
+  },
   "scripts": {
+    "install": "flow-typed install --overwrite --skip",
+    "lint": "flow",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
