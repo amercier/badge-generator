@@ -28,7 +28,7 @@
     "install": "flow-typed install --overwrite --skip",
     "lint": "run-p lint:*",
     "lint:prettier": "prettier --list-different '**/*'",
-    "lint:eslint": "eslint --ignore-path .gitignore --ignore-path .prettierignore .",
+    "lint:eslint": "eslint --ignore-path .gitignore --ext .js,.jsx --ignore-pattern flow-typed/ .",
     "lint:flow": "flow",
     "start": "react-scripts start",
     "build": "react-scripts build",
