@@ -1,5 +1,7 @@
 /.*config
 /.*ignore
+/build
+/coverage
 /flow-typed
 *.ico
 *.lock
