@@ -7,6 +7,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import { type Service, type Format, formats } from './config';
+import { type InputEvent } from './util';
 
 type OutputProps = {|
   services: Service[],
@@ -25,8 +26,6 @@ type OutputProps = {|
 type OutputState = {|
   formatIndex: number,
 |};
-
-type InputEvent = SyntheticInputEvent<HTMLInputElement>;
 
 const styles = ({ spacing, typography }) => ({
   subtitle: {
