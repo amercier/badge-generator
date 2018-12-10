@@ -12,14 +12,13 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
-
 import { withStyles } from '@material-ui/core/styles';
 import {
   type Service,
   services as badgeServices,
   styles as badgeStyles,
-  formats as badgeFormats,
 } from './config';
+import Output from './Output';
 
 type AppProps = {|
   classes: {
@@ -37,7 +36,6 @@ type AppState = {|
   repository: string,
   style: string,
   services: any[],
-  formatIndex: number,
 |};
 
 type InputEvent = SyntheticInputEvent<HTMLInputElement>;
@@ -69,22 +67,6 @@ const styles = ({ spacing, typography }) => ({
     marginTop: 2 * spacing.unit,
     marginBottom: 2 * spacing.unit,
   },
-  subtitle: {
-    marginTop: 2 * spacing.unit,
-  },
-  badges: {
-    lineHeight: '20px',
-  },
-  badge: {
-    marginRight: spacing.unit / 2,
-  },
-  code: {
-    fontFamily: 'Roboto Mono, monospace',
-    fontSize: typography.fontSize - 3,
-    lineHeight: 1.8,
-    overflowX: 'auto',
-    paddingBottom: spacing.unit,
-  },
 });
 
 class App extends Component<AppProps, AppState> {
@@ -92,20 +74,11 @@ class App extends Component<AppProps, AppState> {
     repository: '',
     style: badgeStyles[0],
     services: badgeServices.map(badgeService => !!badgeService.enabled),
-    formatIndex: badgeFormats.findIndex(badgeFormat => badgeFormat.default),
   };
 
   get enabledServices(): Service[] {
     const { services } = this.state;
-    return services.reduce(
-      (acc: Service[], enabled: boolean, index: number) => {
-        if (enabled) {
-          acc.push(this.formatService(badgeServices[index]));
-        }
-        return acc;
-      },
-      [],
-    );
+    return badgeServices.filter((service, index) => services[index]);
   }
 
   handleRepositoryChange = (event: InputEvent) => {
@@ -123,28 +96,10 @@ class App extends Component<AppProps, AppState> {
     this.setState({ style });
   };
 
-  formatUrl(url: string) {
-    const { repository } = this.state;
-    return url
-      .replace('{repository}', repository)
-      .replace('{branch}', 'master');
-  }
-
-  formatService({ name, title, url, imageUrl }: Service): Service {
-    const { style } = this.state;
-    return {
-      name,
-      title,
-      url: this.formatUrl(url),
-      imageUrl: `${this.formatUrl(imageUrl)}?style=${style}`,
-    };
-  }
-
   render() {
     const { classes } = this.props;
-    const { repository, services, style, formatIndex } = this.state;
+    const { repository, services, style } = this.state;
     const { enabledServices } = this;
-    const format = badgeFormats[formatIndex];
     return (
       <form className={classes.container} noValidate autoComplete="off">
         <CssBaseline />
@@ -216,53 +171,11 @@ class App extends Component<AppProps, AppState> {
         </Paper>
         {repository && enabledServices.length > 0 && (
           <Paper className={classes.paper}>
-            <Typography
-              variant="h6"
-              className={classes.subtitle}
-              headlineMapping={{ h6: 'h2' }}
-            >
-              Preview
-            </Typography>
-            <p className={classes.badges}>
-              {enabledServices.map(({ title, url, imageUrl }) => (
-                <a
-                  key={`image-${title.replace(/ /g, '-').toLowerCase()}`}
-                  href={url
-                    .replace('{repository}', repository)
-                    .replace('{branch}', 'master')}
-                  className={classes.badge}
-                  title={title}
-                >
-                  <img
-                    src={imageUrl
-                      .replace('{repository}', repository)
-                      .replace('{branch}', 'master')}
-                    alt={title}
-                  />
-                </a>
-              ))}
-            </p>
-            <Typography
-              variant="h6"
-              className={classes.subtitle}
-              headlineMapping={{ h6: 'h2' }}
-            >
-              Source code
-            </Typography>
-            <pre className={classes.code}>
-              {enabledServices.map(
-                ({ title, url, imageUrl }) =>
-                  `${format.template(
-                    title,
-                    url
-                      .replace('{repository}', repository)
-                      .replace('{branch}', 'master'),
-                    imageUrl
-                      .replace('{repository}', repository)
-                      .replace('{branch}', 'master'),
-                  )}\n`,
-              )}
-            </pre>
+            <Output
+              services={enabledServices}
+              repository={repository}
+              style={style}
+            />
           </Paper>
         )}
       </form>
