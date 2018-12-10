@@ -1,6 +1,9 @@
 // @flow
 
-import React from 'react';
+import React, { Component } from 'react';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import { type Service, type Format, formats } from './config';
@@ -13,11 +16,17 @@ type OutputProps = {|
     subtitle: string,
     badges: string,
     badge: string,
+    formats: string,
+    radioGroup: string,
     code: string,
   },
 |};
 
-const format: Format = formats.find(f => f.default) || formats[0];
+type OutputState = {|
+  formatIndex: number,
+|};
+
+type InputEvent = SyntheticInputEvent<HTMLInputElement>;
 
 const styles = ({ spacing, typography }) => ({
   subtitle: {
@@ -28,6 +37,12 @@ const styles = ({ spacing, typography }) => ({
   },
   badge: {
     marginRight: spacing.unit / 2,
+  },
+  formats: {
+    marginTop: spacing.unit,
+  },
+  radioGroup: {
+    flexDirection: 'row',
   },
   code: {
     fontFamily: 'Roboto Mono, monospace',
@@ -42,58 +57,91 @@ function formatUrl(url: string, repository: string, branch: string) {
   return url.replace('{repository}', repository).replace('{branch}', branch);
 }
 
-const Output = ({ services, repository, style, classes }: OutputProps) => {
-  const branch = 'master';
-  const formattedServices = services.map(({ url, imageUrl, ...props }) => ({
-    url: formatUrl(url, repository, branch),
-    imageUrl: `${formatUrl(imageUrl, repository, branch)}?style=${style}`,
-    ...props,
-  }));
+function nameToKey(name: string) {
+  return name.replace(/ /g, '-').toLowerCase();
+}
 
-  return [
-    <Typography
-      key="output-1"
-      variant="h6"
-      className={classes.subtitle}
-      headlineMapping={{ h6: 'h2' }}
-    >
-      Preview
-    </Typography>,
-    <p key="output-2" className={classes.badges}>
-      {formattedServices.map(({ title, url, imageUrl }) => (
-        <a
-          key={`image-${title.replace(/ /g, '-').toLowerCase()}`}
-          href={url}
-          className={classes.badge}
-          title={title}
+class Output extends Component<OutputProps, OutputState> {
+  state = {
+    formatIndex: formats.findIndex(f => f.default) || 0,
+  };
+
+  get format(): Format {
+    const { formatIndex } = this.state;
+    return formats[formatIndex];
+  }
+
+  get formattedServices(): Service[] {
+    const { services, repository, style } = this.props;
+    const branch = 'master';
+    return services.map(({ url, imageUrl, ...props }) => ({
+      url: formatUrl(url, repository, branch),
+      imageUrl: `${formatUrl(imageUrl, repository, branch)}?style=${style}`,
+      ...props,
+    }));
+  }
+
+  handleFormatChange = (event: InputEvent, value: string) => {
+    this.setState({ formatIndex: +value });
+  };
+
+  render() {
+    const { classes } = this.props;
+    const { formatIndex } = this.state;
+    return (
+      <>
+        <Typography
+          variant="h6"
+          className={classes.subtitle}
+          headlineMapping={{ h6: 'h2' }}
         >
-          <img src={imageUrl} alt={title} />
-        </a>
-      ))}
-    </p>,
-    <Typography
-      key="output-3"
-      variant="h6"
-      className={classes.subtitle}
-      headlineMapping={{ h6: 'h2' }}
-    >
-      Source code
-    </Typography>,
-    <pre key="output-4" className={classes.code}>
-      {formattedServices.map(
-        ({ title, url, imageUrl }) =>
-          `${format.template(
-            title,
-            url
-              .replace('{repository}', repository)
-              .replace('{branch}', 'master'),
-            imageUrl
-              .replace('{repository}', repository)
-              .replace('{branch}', 'master'),
-          )}\n`,
-      )}
-    </pre>,
-  ];
-};
+          Preview
+        </Typography>
+        <p className={classes.badges}>
+          {this.formattedServices.map(({ name, title, url, imageUrl }) => (
+            <a
+              key={`image-${nameToKey(name)}`}
+              href={url}
+              className={classes.badge}
+              title={title}
+            >
+              <img src={imageUrl} alt={title} />
+            </a>
+          ))}
+        </p>
+        <Typography
+          variant="h6"
+          className={classes.subtitle}
+          headlineMapping={{ h6: 'h2' }}
+        >
+          Source code
+        </Typography>
+        <form noValidate autoComplete="off" className={classes.formats}>
+          <RadioGroup
+            aria-label="Format"
+            value={`${formatIndex}`}
+            onChange={this.handleFormatChange}
+            className={classes.radioGroup}
+          >
+            {formats.map(({ name }, index) => (
+              <FormControlLabel
+                key={`format-${nameToKey(name)}`}
+                value={`${index}`}
+                control={<Radio />}
+                label={name}
+              />
+            ))}
+          </RadioGroup>
+        </form>
+        <pre className={classes.code}>
+          {this.formattedServices.map(
+            ({ title, url, imageUrl }) =>
+              `${this.format.template(title, url, imageUrl)}\n`,
+          )}
+        </pre>
+      </>
+    );
+  }
+}
 
 export default withStyles(styles)(Output);

@@ -101,73 +101,75 @@ class App extends Component<AppProps, AppState> {
     const { repository, services, style } = this.state;
     const { enabledServices } = this;
     return (
-      <form className={classes.container} noValidate autoComplete="off">
+      <>
         <CssBaseline />
         <Typography variant="h4" headlineMapping={{ h4: 'h1' }}>
           Github Badge Generator
         </Typography>
         <Paper className={classes.paper}>
-          <Grid container>
-            <Grid item xs={12} className={classes.gridItem}>
-              <TextField
-                label="Repository"
-                helperText='Ex: "lodash" (npm name), "facebook/react" (Github slug), etc.'
-                margin="normal"
-                fullWidth
-                value={repository}
-                onChange={this.handleRepositoryChange}
-              />
-            </Grid>
-            <Grid item xs={12} sm={10} className={classes.gridItem}>
-              <FormControl component="fieldset">
-                <FormLabel component="legend">Services</FormLabel>
-                <Grid container>
-                  {badgeServices.map(({ name }, index) => (
-                    <Grid
-                      key={`service-${name.replace(/ /g, '-').toLowerCase()}`}
-                      item
-                      xs={12}
-                      sm={6}
-                      md={4}
-                      lg={3}
-                    >
+          <form className={classes.container} noValidate autoComplete="off">
+            <Grid container>
+              <Grid item xs={12} className={classes.gridItem}>
+                <TextField
+                  label="Repository"
+                  helperText='Ex: "lodash" (npm name), "facebook/react" (Github slug), etc.'
+                  margin="normal"
+                  fullWidth
+                  value={repository}
+                  onChange={this.handleRepositoryChange}
+                />
+              </Grid>
+              <Grid item xs={12} sm={10} className={classes.gridItem}>
+                <FormControl component="fieldset">
+                  <FormLabel component="legend">Services</FormLabel>
+                  <Grid container>
+                    {badgeServices.map(({ name }, index) => (
+                      <Grid
+                        key={`service-${name.replace(/ /g, '-').toLowerCase()}`}
+                        item
+                        xs={12}
+                        sm={6}
+                        md={4}
+                        lg={3}
+                      >
+                        <FormControlLabel
+                          label={name}
+                          title={name}
+                          control={
+                            <Checkbox
+                              checked={services[index]}
+                              onChange={this.handleServiceToggle(index)}
+                              value={`${index}`}
+                            />
+                          }
+                        />
+                      </Grid>
+                    ))}
+                  </Grid>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12} sm={2} className={classes.gridItem}>
+                <FormControl component="fieldset">
+                  <FormLabel component="legend">Style</FormLabel>
+                  <RadioGroup
+                    aria-label="Style"
+                    name="style"
+                    value={style}
+                    onChange={this.handleStyleChange}
+                  >
+                    {badgeStyles.map(badgeStyle => (
                       <FormControlLabel
-                        label={name}
-                        title={name}
-                        control={
-                          <Checkbox
-                            checked={services[index]}
-                            onChange={this.handleServiceToggle(index)}
-                            value={`${index}`}
-                          />
-                        }
+                        key={`style-${badgeStyle}`}
+                        value={badgeStyle}
+                        control={<Radio />}
+                        label={styleName(badgeStyle)}
                       />
-                    </Grid>
-                  ))}
-                </Grid>
-              </FormControl>
+                    ))}
+                  </RadioGroup>
+                </FormControl>
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={2} className={classes.gridItem}>
-              <FormControl component="fieldset">
-                <FormLabel component="legend">Style</FormLabel>
-                <RadioGroup
-                  aria-label="Style"
-                  name="style"
-                  value={style}
-                  onChange={this.handleStyleChange}
-                >
-                  {badgeStyles.map(badgeStyle => (
-                    <FormControlLabel
-                      key={`style-${badgeStyle}`}
-                      value={badgeStyle}
-                      control={<Radio />}
-                      label={styleName(badgeStyle)}
-                    />
-                  ))}
-                </RadioGroup>
-              </FormControl>
-            </Grid>
-          </Grid>
+          </form>
         </Paper>
         {repository && enabledServices.length > 0 && (
           <Paper className={classes.paper}>
@@ -178,7 +180,7 @@ class App extends Component<AppProps, AppState> {
             />
           </Paper>
         )}
-      </form>
+      </>
     );
   }
 }
