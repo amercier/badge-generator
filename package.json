@@ -156,8 +156,9 @@
       },
       {
         "files": [
+          "src/index.jsx",
           "src/**/*.spec.jsx",
-          "src/**/index.jsx"
+          "src/**/*.spec.jsx.snap"
         ],
         "rules": {
           "unicorn/filename-case": "off"
