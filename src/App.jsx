@@ -95,7 +95,7 @@ class App extends Component<AppProps, AppState> {
             <Output
               services={enabledServices}
               repository={repository}
-              style={style}
+              badgeStyle={style}
             />
           </Paper>
         )}

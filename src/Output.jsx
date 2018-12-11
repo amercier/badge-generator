@@ -12,7 +12,7 @@ import { type InputEvent } from './util';
 type OutputProps = {|
   services: Service[],
   repository: string,
-  style: string,
+  badgeStyle: string,
   classes: {
     subtitle: string,
     badges: string,
@@ -71,11 +71,15 @@ class Output extends Component<OutputProps, OutputState> {
   }
 
   get formattedServices(): Service[] {
-    const { services, repository, style } = this.props;
+    const { services, repository, badgeStyle } = this.props;
     const branch = 'master';
     return services.map(({ url, imageUrl, ...props }) => ({
       url: formatUrl(url, repository, branch),
-      imageUrl: `${formatUrl(imageUrl, repository, branch)}?style=${style}`,
+      imageUrl: `${formatUrl(
+        imageUrl,
+        repository,
+        branch,
+      )}?style=${badgeStyle}`,
       ...props,
     }));
   }
