@@ -32,7 +32,7 @@ const styles = ({ spacing }) => ({
   },
 });
 
-const Input = ({
+export const Input = ({
   repository,
   serviceSelection,
   style,

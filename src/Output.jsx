@@ -60,7 +60,7 @@ function nameToKey(name: string) {
   return name.replace(/ /g, '-').toLowerCase();
 }
 
-class Output extends Component<OutputProps, OutputState> {
+export class Output extends Component<OutputProps, OutputState> {
   state = {
     formatIndex: formats.findIndex(f => f.default) || 0,
   };

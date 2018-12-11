@@ -7,8 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import { type Service, services, styles as badgeStyles } from './config';
 import { type InputEvent } from './util';
-import Input from './Input';
-import Output from './Output';
+import InputWithStyle from './Input';
+import OutputWithStyle from './Output';
 
 type AppProps = {|
   classes: {
@@ -43,7 +43,7 @@ const styles = ({ spacing, typography }) => ({
   },
 });
 
-class App extends Component<AppProps, AppState> {
+export class App extends Component<AppProps, AppState> {
   state = {
     repository: '',
     style: badgeStyles[0],
@@ -81,7 +81,7 @@ class App extends Component<AppProps, AppState> {
           Github Badge Generator
         </Typography>
         <Paper className={classes.paper}>
-          <Input
+          <InputWithStyle
             repository={repository}
             serviceSelection={serviceSelection}
             style={style}
@@ -92,7 +92,7 @@ class App extends Component<AppProps, AppState> {
         </Paper>
         {repository && enabledServices.length > 0 && (
           <Paper className={classes.paper}>
-            <Output
+            <OutputWithStyle
               services={enabledServices}
               repository={repository}
               badgeStyle={style}

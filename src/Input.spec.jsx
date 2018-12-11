@@ -4,7 +4,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Input from './Input';
+import InputWithStyle from './Input';
 import { type Service, services, styles } from './config';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -15,7 +15,7 @@ const serviceSelection = services.map((service, index) => !!(index % 2));
 describe('Input', () => {
   it('renders', () => {
     const component = renderer.create(
-      <Input
+      <InputWithStyle
         repository="REPOSITORY"
         style={styles[0]}
         serviceSelection={serviceSelection}
@@ -30,7 +30,7 @@ describe('Input', () => {
   it('calls handleRepositoryChange when respository changes', () => {
     const handleRepositoryChangeMock = jest.fn();
     const input = mount(
-      <Input
+      <InputWithStyle
         repository="REPOSITORY"
         style={styles[0]}
         serviceSelection={serviceSelection}
@@ -48,7 +48,7 @@ describe('Input', () => {
   it('calls handleServiceToggle when a service is toggled', () => {
     const handleServiceToggleMocks = services.map(() => jest.fn());
     const input = mount(
-      <Input
+      <InputWithStyle
         repository="REPOSITORY"
         style={styles[0]}
         serviceSelection={serviceSelection}
@@ -71,7 +71,7 @@ describe('Input', () => {
   it('calls handleStyleChange when respository changes', () => {
     const handleStyleChangeMock = jest.fn();
     const input = mount(
-      <Input
+      <InputWithStyle
         repository="REPOSITORY"
         style={styles[0]}
         serviceSelection={serviceSelection}

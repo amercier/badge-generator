@@ -2,13 +2,17 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Output from './Output';
+import OutputWithStyle from './Output';
 
 describe('Output', () => {
   describe('when services are empty', () => {
     it('renders', () => {
       const component = renderer.create(
-        <Output services={[]} badgeStyle="STYLE" repository="REPOSITORY" />,
+        <OutputWithStyle
+          services={[]}
+          badgeStyle="STYLE"
+          repository="REPOSITORY"
+        />,
       );
       expect(component.toJSON()).toMatchSnapshot();
     });
@@ -31,7 +35,7 @@ describe('Output', () => {
         },
       ];
       const component = renderer.create(
-        <Output
+        <OutputWithStyle
           services={services}
           badgeStyle="STYLE"
           repository="REPOSITORY"
