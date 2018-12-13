@@ -7,6 +7,7 @@ install:
   - yarn install --ignore-scripts # Prevent flow-typed update
 script:
   - yarn test --coverage
+  - yarn test-integration
 after_success:
   - codecov
   - yarn build # Prevent before_deploy not being tested in PRs
