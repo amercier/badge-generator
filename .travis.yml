@@ -9,3 +9,4 @@ script:
   - yarn test --coverage
 after_success:
   - codecov
+  - yarn build # Prevent before_deploy not being tested in PRs
