@@ -57,6 +57,14 @@ Your app is ready to be deployed!
 
 See the section about [deployment] for more information.
 
+### Continuous Delivery
+
+Each successful build on the `master` branch is automatically deployed by Travis CI on
+[GitHub Pages]. See [GitHub Pages Deployment] for more information.
+
+**Note:**: `GITHUB_TOKEN` and `CNAME` environment variables must be set in Travis CI project
+settings.
+
 ## License
 
 [![License](https://img.shields.io/badge/license-ISC-brightgreen.svg)](LICENSE.md)
@@ -66,3 +74,5 @@ See the section about [deployment] for more information.
 [yarn]: https://yarnpkg.com/
 [running tests]: https://facebook.github.io/create-react-app/docs/running-tests
 [deployment]: https://facebook.github.io/create-react-app/docs/deployment
+[github pages]: https://pages.github.com/
+[github pages deployment]: https://docs.travis-ci.com/user/deployment/pages/
