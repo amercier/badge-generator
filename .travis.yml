@@ -11,6 +11,7 @@ before_install:
   # Enable user namespace cloning
   - 'sysctl kernel.unprivileged_userns_clone=1'
 # -----
+sudo: enabled # Seems to fix "Error: Navigation failed because browser has disconnected!" error
 
 language: node_js
 node_js: --lts # LTS
