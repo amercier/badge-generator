@@ -13,7 +13,7 @@ let page;
 
 beforeEach(async () => {
   page = await browser.newPage();
-  page.emulate({
+  await page.emulate({
     viewport: {
       width: 1920,
       height: 1080,
@@ -28,7 +28,9 @@ test('Setting repository and enabling some services', async () => {
 
   // Set repository
   await page.focus('input[type="text"]');
-  await page.keyboard.type('amercier/badge-generator');
+  await page.keyboard.type('amercier/badge-generator', {
+    delay: 20,
+  });
 
   // Select services
   await page.click('label[title="Travis CI"]');
