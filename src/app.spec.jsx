@@ -3,9 +3,9 @@
 import React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import ReactDOM from 'react-dom';
-import AppWithStyle, { App } from './App';
-import { Input } from './Input';
-import { Output } from './Output';
+import AppWithStyle, { App } from './app';
+import { Input } from './input';
+import { Output } from './output';
 import { services } from './config';
 
 const toString = value => Object.prototype.toString.apply(value);

@@ -67,6 +67,12 @@
       }
     },
     "rules": {
+      "unicorn/filename-case": [
+        "error",
+        {
+          "case": "camelCase"
+        }
+      ],
       "react/require-default-props": [
         "error",
         {
@@ -130,19 +136,6 @@
       },
       {
         "files": [
-          "src/**/*.jsx"
-        ],
-        "rules": {
-          "unicorn/filename-case": [
-            "error",
-            {
-              "case": "pascalCase"
-            }
-          ]
-        }
-      },
-      {
-        "files": [
           "src/**/*.spec.*",
           "src/setupTests.js"
         ],
@@ -156,17 +149,6 @@
               "devDependencies": true
             }
           ]
-        }
-      },
-      {
-        "files": [
-          "src/index.jsx",
-          "src/setupTests.js",
-          "src/**/*.spec.jsx",
-          "src/**/*.spec.jsx.snap"
-        ],
-        "rules": {
-          "unicorn/filename-case": "off"
         }
       }
     ]

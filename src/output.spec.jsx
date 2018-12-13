@@ -2,7 +2,7 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import OutputWithStyle from './Output';
+import OutputWithStyle from './output';
 
 describe('Output', () => {
   describe('when services are empty', () => {

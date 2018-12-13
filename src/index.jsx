@@ -2,8 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppWithStyle from './App';
-import * as serviceWorker from './service-worker';
+import AppWithStyle from './app';
+import * as serviceWorker from './serviceWorker';
 
 const root = document.getElementById('root');
 if (root !== null) {
