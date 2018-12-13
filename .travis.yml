@@ -5,3 +5,7 @@ before_script:
   - yarn lint
 install:
   - yarn install --ignore-scripts # Prevent flow-typed update
+script:
+  - yarn test --coverage
+after_success:
+  - codecov
