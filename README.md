@@ -6,4 +6,4 @@ A service to generate Shields.io badges for yout GitHub project's README.
 [![Code Coverage](https://img.shields.io/codeclimate/coverage/github/amercier/badge-generator.svg?style=flat-square)](https://codeclimate.com/github/amercier/badge-generator)
 [![Dependency Status](http://img.shields.io/gemnasium/amercier/badge-generator.svg?style=flat-square)](https://gemnasium.com/amercier/badge-generator)
 
-[![Badge Generator](https://cloud.githubusercontent.com/assets/1246795/13726569/0d2652a0-e882-11e5-86cb-afb36748e400.png)](http://badges.amercier.com/)
+[![Badge Generator](https://cloud.githubusercontent.com/assets/1246795/13726569/0d2652a0-e882-11e5-86cb-afb36748e400.png)](http://badges.amercier.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/amercier/badge-generator.svg)](https://greenkeeper.io/)
