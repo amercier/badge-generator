@@ -1,0 +1,43 @@
+const puppeteer = require('puppeteer');
+const { port } = require('../jest-puppeteer.config').server;
+
+let browser;
+
+beforeAll(async () => {
+  browser = await puppeteer.launch();
+});
+
+afterAll(() => browser.close());
+
+let page;
+
+beforeEach(async () => {
+  page = await browser.newPage();
+  page.emulate({
+    viewport: {
+      width: 1920,
+      height: 1080,
+    },
+    userAgent: 'Puppeteer',
+  });
+  await page.goto(`http://localhost:${port}/`);
+});
+
+test('Setting repository and enabling some services', async () => {
+  await expect(page).toMatch('Github Badge Generator');
+
+  // Set repository
+  await page.focus('input[type="text"]');
+  await page.keyboard.type('amercier/badge-generator');
+
+  // Select services
+  await page.click('label[title="Travis CI"]');
+  await page.click('label[title="Codecov"]');
+  await page.click('label[title="David DM"]');
+  await page.click('label[title="David DM (dev)"]');
+
+  const output = await page.evaluate(
+    () => document.querySelector('pre').innerText,
+  );
+  expect(output).toMatchSnapshot();
+});

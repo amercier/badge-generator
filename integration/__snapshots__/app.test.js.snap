@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Setting repository and enabling some services 1`] = `
+"[![Build Status](https://img.shields.io/travis/amercier/badge-generator/master.svg?style=default)](https://travis-ci.org/amercier/badge-generator)
+[![Test Coverage](https://img.shields.io/codecov/c/github/amercier/badge-generator/master.svg?style=default)](https://codecov.io/github/amercier/badge-generator?branch=master)
+[![Dependency Status](https://img.shields.io/david/amercier/badge-generator.svg?style=default)](https://david-dm.org/amercier/badge-generator)
+[![devDependency Status](https://img.shields.io/david/dev/amercier/badge-generator.svg?style=default)](https://david-dm.org/amercier/badge-generator#info=devDependencies)
+"
+`;
