@@ -7,20 +7,7 @@ import AppWithStyle, { App } from './app';
 import { Input } from './input';
 import { Output } from './output';
 import { services } from './config';
-
-const toString = value => Object.prototype.toString.apply(value);
-
-function findByType(testInstance: ReactTestInstance, Type: Object) {
-  const { instance } = testInstance.findByType(Type);
-  if (!(instance instanceof Type)) {
-    throw new TypeError(
-      `Expected app to be an instance of ${Type.name}, got ${toString(
-        instance,
-      )}`,
-    );
-  }
-  return instance;
-}
+import { findByType } from './testHelpers';
 
 describe('App', () => {
   describe('when repository is not set and services are not checked', () => {

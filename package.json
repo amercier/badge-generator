@@ -165,7 +165,8 @@
       "!src/**/*.spec.{js,jsx}",
       "!src/index.jsx",
       "!src/serviceWorker.js",
-      "!src/setupTests.js"
+      "!src/setupTests.js",
+      "!src/testHelpers.js"
     ]
   }
 }
