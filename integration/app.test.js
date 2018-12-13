@@ -23,6 +23,8 @@ beforeEach(async () => {
   await page.goto(`http://localhost:${port}/`);
 });
 
+afterEach(() => page.close());
+
 test('Setting repository and enabling some services', async () => {
   await expect(page).toMatch('Github Badge Generator');
 
