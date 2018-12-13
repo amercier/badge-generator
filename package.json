@@ -20,6 +20,7 @@
     "eslint-plugin-unicorn": "^6.0.1",
     "flow-bin": "^0.87.0",
     "flow-typed": "^2.5.1",
+    "jest-extended": "^0.11.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.3",
     "react-scripts": "2.1.1",
@@ -142,7 +143,8 @@
       },
       {
         "files": [
-          "src/**/*.spec.*"
+          "src/**/*.spec.*",
+          "src/setupTests.js"
         ],
         "env": {
           "jest": true
@@ -159,6 +161,7 @@
       {
         "files": [
           "src/index.jsx",
+          "src/setupTests.js",
           "src/**/*.spec.jsx",
           "src/**/*.spec.jsx.snap"
         ],
