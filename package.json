@@ -1,6 +1,5 @@
 {
   "name": "badge-generator",
-  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.6.1",
