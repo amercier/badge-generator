@@ -20,6 +20,7 @@
     "eslint-plugin-unicorn": "^6.0.1",
     "flow-bin": "^0.88.0",
     "flow-typed": "^2.5.1",
+    "jest-extended": "^0.11.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.3",
     "react-scripts": "2.1.1",
@@ -66,6 +67,12 @@
       }
     },
     "rules": {
+      "unicorn/filename-case": [
+        "error",
+        {
+          "case": "camelCase"
+        }
+      ],
       "react/require-default-props": [
         "error",
         {
@@ -129,20 +136,8 @@
       },
       {
         "files": [
-          "src/**/*.jsx"
-        ],
-        "rules": {
-          "unicorn/filename-case": [
-            "error",
-            {
-              "case": "pascalCase"
-            }
-          ]
-        }
-      },
-      {
-        "files": [
-          "src/**/*.spec.*"
+          "src/**/*.spec.*",
+          "src/setupTests.js"
         ],
         "env": {
           "jest": true
@@ -155,16 +150,6 @@
             }
           ]
         }
-      },
-      {
-        "files": [
-          "src/index.jsx",
-          "src/**/*.spec.jsx",
-          "src/**/*.spec.jsx.snap"
-        ],
-        "rules": {
-          "unicorn/filename-case": "off"
-        }
       }
     ]
   },
@@ -173,5 +158,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/**/*.spec.{js,jsx}",
+      "!src/index.jsx",
+      "!src/serviceWorker.js",
+      "!src/setupTests.js",
+      "!src/testHelpers.js"
+    ]
+  }
 }

@@ -2,12 +2,9 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import InputWithStyle from './Input';
+import { mount } from 'enzyme';
+import InputWithStyle from './input';
 import { type Service, services, styles } from './config';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 const noop = () => {};
 const serviceSelection = services.map((service, index) => !!(index % 2));
