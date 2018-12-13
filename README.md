@@ -69,7 +69,7 @@ settings.
 
 ## License
 
-[![License](https://img.shields.io/badge/license-ISC-brightgreen.svg)](LICENSE.md)
+[![License](https://img.shields.io/github/license/amercier/badge-generator.svg)](LICENSE.md)
 
 [create react app]: https://github.com/facebook/create-react-app
 [nodejs]: https://nodejs.org/
