@@ -4,8 +4,8 @@ cache: yarn
 before_script:
   - yarn lint
 script:
-  - yarn test --coverage
-  - yarn test-integration
+  - yarn test --coverage --colors
+  - yarn test-integration --colors
 after_success:
   - codecov
   - yarn build # Prevent before_deploy not being tested in PRs
