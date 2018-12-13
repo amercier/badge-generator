@@ -73,13 +73,10 @@ export class Output extends Component<OutputProps, OutputState> {
   get formattedServices(): Service[] {
     const { services, repository, badgeStyle } = this.props;
     const branch = 'master';
+    const style = badgeStyle === 'default' ? '' : `?style=${badgeStyle}`;
     return services.map(({ url, imageUrl, ...props }) => ({
       url: formatUrl(url, repository, branch),
-      imageUrl: `${formatUrl(
-        imageUrl,
-        repository,
-        branch,
-      )}?style=${badgeStyle}`,
+      imageUrl: `${formatUrl(imageUrl, repository, branch)}${style}`,
       ...props,
     }));
   }
