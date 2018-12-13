@@ -8,6 +8,8 @@
 [![devDependency Status](https://img.shields.io/david/dev/amercier/badge-generator.svg)](https://david-dm.org/amercier/badge-generator#info=devDependencies)
 [![Greenkeeper](https://badges.greenkeeper.io/amercier/badge-generator.svg)](https://github.com/amercier/badge-generator/issues?q=label%3Agreenkeeper)
 
+[![Preview](media/preview.png)](https://badges.amercier.com/)
+
 ## Getting started
 
 This application was bootstrapped with [Create React App].
