@@ -10,3 +10,13 @@ script:
 after_success:
   - codecov
   - yarn build # Prevent before_deploy not being tested in PRs
+before_deploy:
+  - echo "$CNAME" > build/CNAME
+deploy:
+  provider: pages
+  github-token: $GITHUB_TOKEN
+  local-dir: build
+  skip_cleanup: true
+  keep-history: true
+  on:
+    branch: master
