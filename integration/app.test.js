@@ -2,16 +2,10 @@ const puppeteer = require('puppeteer');
 const { port } = require('../jest-puppeteer.config').server;
 
 let browser;
-
-beforeAll(async () => {
-  browser = await puppeteer.launch();
-});
-
-afterAll(() => browser.close());
-
 let page;
 
 beforeEach(async () => {
+  browser = await puppeteer.launch();
   page = await browser.newPage();
   await page.emulate({
     viewport: {
@@ -23,7 +17,10 @@ beforeEach(async () => {
   await page.goto(`http://localhost:${port}/`);
 });
 
-afterEach(() => page.close());
+afterEach(async () => {
+  await page.close();
+  await browser.close();
+});
 
 test('Setting repository and enabling some services', async () => {
   await expect(page).toMatch('Github Badge Generator');
