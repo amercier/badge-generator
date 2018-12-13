@@ -5,7 +5,10 @@ let browser;
 let page;
 
 beforeEach(async () => {
-  browser = await puppeteer.launch({ dumpio: true });
+  browser = await puppeteer.launch({
+    dumpio: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
   page = await browser.newPage();
   await page.emulate({
     viewport: {
