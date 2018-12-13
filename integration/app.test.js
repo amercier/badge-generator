@@ -5,7 +5,7 @@ let browser;
 let page;
 
 beforeEach(async () => {
-  browser = await puppeteer.launch();
+  browser = await puppeteer.launch({ dumpio: true });
   page = await browser.newPage();
   await page.emulate({
     viewport: {
