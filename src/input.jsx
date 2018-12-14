@@ -97,6 +97,7 @@ export const Input = ({
                 value={badgeStyle}
                 control={<Radio />}
                 label={styleName(badgeStyle)}
+                title={styleName(badgeStyle)}
               />
             ))}
           </RadioGroup>

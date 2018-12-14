@@ -27,6 +27,7 @@ Array [
     >
       <label
         className="MuiFormControlLabel-root-44"
+        title="URL"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -76,6 +77,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Image URL"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -125,6 +127,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Markdown"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54 MuiPrivateSwitchBase-checked-56 MuiRadio-checked-51"
@@ -174,6 +177,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Org Mode"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -223,6 +227,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Textile"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -272,6 +277,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Rdoc"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -321,6 +327,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="AsciiDoc"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -370,6 +377,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="RST"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -419,6 +427,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Pod"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -522,6 +531,7 @@ Array [
     >
       <label
         className="MuiFormControlLabel-root-44"
+        title="URL"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -571,6 +581,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Image URL"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -620,6 +631,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Markdown"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54 MuiPrivateSwitchBase-checked-56 MuiRadio-checked-51"
@@ -669,6 +681,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Org Mode"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -718,6 +731,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Textile"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -767,6 +781,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Rdoc"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -816,6 +831,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="AsciiDoc"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -865,6 +881,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="RST"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
@@ -914,6 +931,7 @@ Array [
       </label>
       <label
         className="MuiFormControlLabel-root-44"
+        title="Pod"
       >
         <span
           className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"

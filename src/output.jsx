@@ -129,6 +129,7 @@ export class Output extends Component<OutputProps, OutputState> {
                 value={`${index}`}
                 control={<Radio />}
                 label={name}
+                title={name}
               />
             ))}
           </RadioGroup>

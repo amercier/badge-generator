@@ -1646,6 +1646,7 @@ exports[`Input renders 1`] = `
         >
           <label
             className="MuiFormControlLabel-root-159"
+            title="Default"
           >
             <span
               className="MuiButtonBase-root-181 MuiIconButton-root-175 MuiPrivateSwitchBase-root-171 MuiRadio-root-230 MuiRadio-colorSecondary-234 MuiPrivateSwitchBase-checked-172 MuiRadio-checked-231"
@@ -1697,6 +1698,7 @@ exports[`Input renders 1`] = `
           </label>
           <label
             className="MuiFormControlLabel-root-159"
+            title="Plastic"
           >
             <span
               className="MuiButtonBase-root-181 MuiIconButton-root-175 MuiPrivateSwitchBase-root-171 MuiRadio-root-230 MuiRadio-colorSecondary-234"
@@ -1748,6 +1750,7 @@ exports[`Input renders 1`] = `
           </label>
           <label
             className="MuiFormControlLabel-root-159"
+            title="Flat square"
           >
             <span
               className="MuiButtonBase-root-181 MuiIconButton-root-175 MuiPrivateSwitchBase-root-171 MuiRadio-root-230 MuiRadio-colorSecondary-234"
@@ -1799,6 +1802,7 @@ exports[`Input renders 1`] = `
           </label>
           <label
             className="MuiFormControlLabel-root-159"
+            title="For the badge"
           >
             <span
               className="MuiButtonBase-root-181 MuiIconButton-root-175 MuiPrivateSwitchBase-root-171 MuiRadio-root-230 MuiRadio-colorSecondary-234"
@@ -1850,6 +1854,7 @@ exports[`Input renders 1`] = `
           </label>
           <label
             className="MuiFormControlLabel-root-159"
+            title="Social"
           >
             <span
               className="MuiButtonBase-root-181 MuiIconButton-root-175 MuiPrivateSwitchBase-root-171 MuiRadio-root-230 MuiRadio-colorSecondary-234"
