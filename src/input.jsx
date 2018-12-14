@@ -46,6 +46,7 @@ export const Input = ({
       <Grid item xs={12} className={classes.gridItem}>
         <TextField
           label="Repository"
+          title="Repository"
           helperText='Ex: "lodash" (npm name), "facebook/react" (Github slug), etc.'
           margin="normal"
           fullWidth

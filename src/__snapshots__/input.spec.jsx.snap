@@ -13,6 +13,7 @@ exports[`Input renders 1`] = `
     >
       <div
         className="MuiFormControl-root-99 MuiFormControl-marginNormal-100 MuiFormControl-fullWidth-102"
+        title="Repository"
       >
         <label
           className="MuiFormLabel-root-114 MuiFormLabel-filled-118 MuiInputLabel-root-103 MuiInputLabel-formControl-108 MuiInputLabel-animated-111 MuiInputLabel-shrink-110"

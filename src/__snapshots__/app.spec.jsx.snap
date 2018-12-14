@@ -67,6 +67,7 @@ exports[`App when repository is not set and services are not checked renders com
         >
           <div
             className="MuiFormControl-root-433 MuiFormControl-marginNormal-434 MuiFormControl-fullWidth-436"
+            title="Repository"
           >
             <label
               className="MuiFormLabel-root-448 MuiInputLabel-root-437 MuiInputLabel-formControl-442 MuiInputLabel-animated-445"

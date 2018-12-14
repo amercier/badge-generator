@@ -44,7 +44,7 @@ describe('App', () => {
     await expect(page).toMatch('Github Badge Generator');
 
     // Set repository
-    await page.focus('input[type="text"]');
+    await page.focus('[title="Repository"] input');
     await page.keyboard.type('amercier/badge-generator', {
       delay: 20,
     });
