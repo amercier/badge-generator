@@ -20,6 +20,7 @@
     "eslint-plugin-unicorn": "^6.0.1",
     "flow-bin": "^0.89.0",
     "flow-typed": "^2.5.1",
+    "if-ci": "^2.0.2",
     "jest-extended": "^0.11.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.3",
@@ -30,7 +31,7 @@
     "jest": "^23.6.0"
   },
   "scripts": {
-    "install": "flow-typed install --overwrite --skip",
+    "install": "if-not-ci flow-typed install --overwrite --skip",
     "lint": "run-p lint:*",
     "lint:prettier": "prettier --list-different '**/*'",
     "lint:eslint": "eslint --ignore-path .gitignore --ext .js,.jsx --ignore-pattern flow-typed/ .",
