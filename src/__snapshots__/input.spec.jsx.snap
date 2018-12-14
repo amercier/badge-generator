@@ -13,6 +13,7 @@ exports[`Input renders 1`] = `
     >
       <div
         className="MuiFormControl-root-99 MuiFormControl-marginNormal-100 MuiFormControl-fullWidth-102"
+        title="Repository"
       >
         <label
           className="MuiFormLabel-root-114 MuiFormLabel-filled-118 MuiInputLabel-root-103 MuiInputLabel-formControl-108 MuiInputLabel-animated-111 MuiInputLabel-shrink-110"
@@ -1646,6 +1647,7 @@ exports[`Input renders 1`] = `
         >
           <label
             className="MuiFormControlLabel-root-159"
+            title="Default"
           >
             <span
               className="MuiButtonBase-root-181 MuiIconButton-root-175 MuiPrivateSwitchBase-root-171 MuiRadio-root-230 MuiRadio-colorSecondary-234 MuiPrivateSwitchBase-checked-172 MuiRadio-checked-231"
@@ -1697,6 +1699,7 @@ exports[`Input renders 1`] = `
           </label>
           <label
             className="MuiFormControlLabel-root-159"
+            title="Plastic"
           >
             <span
               className="MuiButtonBase-root-181 MuiIconButton-root-175 MuiPrivateSwitchBase-root-171 MuiRadio-root-230 MuiRadio-colorSecondary-234"
@@ -1748,6 +1751,7 @@ exports[`Input renders 1`] = `
           </label>
           <label
             className="MuiFormControlLabel-root-159"
+            title="Flat square"
           >
             <span
               className="MuiButtonBase-root-181 MuiIconButton-root-175 MuiPrivateSwitchBase-root-171 MuiRadio-root-230 MuiRadio-colorSecondary-234"
@@ -1799,6 +1803,7 @@ exports[`Input renders 1`] = `
           </label>
           <label
             className="MuiFormControlLabel-root-159"
+            title="For the badge"
           >
             <span
               className="MuiButtonBase-root-181 MuiIconButton-root-175 MuiPrivateSwitchBase-root-171 MuiRadio-root-230 MuiRadio-colorSecondary-234"
@@ -1850,6 +1855,7 @@ exports[`Input renders 1`] = `
           </label>
           <label
             className="MuiFormControlLabel-root-159"
+            title="Social"
           >
             <span
               className="MuiButtonBase-root-181 MuiIconButton-root-175 MuiPrivateSwitchBase-root-171 MuiRadio-root-230 MuiRadio-colorSecondary-234"

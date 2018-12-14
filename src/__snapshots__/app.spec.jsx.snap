@@ -67,6 +67,7 @@ exports[`App when repository is not set and services are not checked renders com
         >
           <div
             className="MuiFormControl-root-433 MuiFormControl-marginNormal-434 MuiFormControl-fullWidth-436"
+            title="Repository"
           >
             <label
               className="MuiFormLabel-root-448 MuiInputLabel-root-437 MuiInputLabel-formControl-442 MuiInputLabel-animated-445"
@@ -1700,6 +1701,7 @@ exports[`App when repository is not set and services are not checked renders com
             >
               <label
                 className="MuiFormControlLabel-root-493"
+                title="Default"
               >
                 <span
                   className="MuiButtonBase-root-515 MuiIconButton-root-509 MuiPrivateSwitchBase-root-505 MuiRadio-root-529 MuiRadio-colorSecondary-533 MuiPrivateSwitchBase-checked-506 MuiRadio-checked-530"
@@ -1751,6 +1753,7 @@ exports[`App when repository is not set and services are not checked renders com
               </label>
               <label
                 className="MuiFormControlLabel-root-493"
+                title="Plastic"
               >
                 <span
                   className="MuiButtonBase-root-515 MuiIconButton-root-509 MuiPrivateSwitchBase-root-505 MuiRadio-root-529 MuiRadio-colorSecondary-533"
@@ -1802,6 +1805,7 @@ exports[`App when repository is not set and services are not checked renders com
               </label>
               <label
                 className="MuiFormControlLabel-root-493"
+                title="Flat square"
               >
                 <span
                   className="MuiButtonBase-root-515 MuiIconButton-root-509 MuiPrivateSwitchBase-root-505 MuiRadio-root-529 MuiRadio-colorSecondary-533"
@@ -1853,6 +1857,7 @@ exports[`App when repository is not set and services are not checked renders com
               </label>
               <label
                 className="MuiFormControlLabel-root-493"
+                title="For the badge"
               >
                 <span
                   className="MuiButtonBase-root-515 MuiIconButton-root-509 MuiPrivateSwitchBase-root-505 MuiRadio-root-529 MuiRadio-colorSecondary-533"
@@ -1904,6 +1909,7 @@ exports[`App when repository is not set and services are not checked renders com
               </label>
               <label
                 className="MuiFormControlLabel-root-493"
+                title="Social"
               >
                 <span
                   className="MuiButtonBase-root-515 MuiIconButton-root-509 MuiPrivateSwitchBase-root-505 MuiRadio-root-529 MuiRadio-colorSecondary-533"
