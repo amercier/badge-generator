@@ -12,7 +12,6 @@ describe('App', () => {
 
     browser = await puppeteer.launch({
       dumpio: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
   });
 
