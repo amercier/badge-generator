@@ -41,6 +41,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-integration": "jest -c integration/jest.config.js",
     "eject": "react-scripts eject"
   },
   "prettier": {
@@ -139,6 +140,7 @@
       },
       {
         "files": [
+          "integration/**",
           "src/**/*.spec.*",
           "src/setupTests.js"
         ],
