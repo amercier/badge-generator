@@ -5,16 +5,20 @@ describe('App', () => {
   let browser;
   let page;
 
-  beforeEach(() => {
+  beforeAll(async () => {
+    // Prevent "Async callback was not invoked within the 5000ms timeout specified by jest.setTimeout"
+    // error in Travis CI and potentially other CI environments.
     jest.setTimeout(30000);
-  });
 
-  test('Setting repository and enabling some services', async () => {
     browser = await puppeteer.launch({
       dumpio: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
+  });
 
+  afterAll(() => browser.close());
+
+  beforeEach(async () => {
     page = await browser.newPage();
     await page.emulate({
       viewport: {
@@ -24,7 +28,11 @@ describe('App', () => {
       userAgent: 'Puppeteer',
     });
     await page.goto(`http://localhost:${port}/`);
+  });
 
+  afterEach(() => page.close());
+
+  test('Setting repository and enabling some services', async () => {
     // Basic test
     await expect(page).toMatch('Github Badge Generator');
 
@@ -44,8 +52,5 @@ describe('App', () => {
       () => document.querySelector('pre').innerText,
     );
     expect(output).toMatchSnapshot();
-
-    await page.close();
-    await browser.close();
   });
 });
