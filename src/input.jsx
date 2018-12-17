@@ -16,7 +16,7 @@ import { type InputEvent, nameToKey, styleName } from './util';
 type InputProps = {|
   repository: string,
   serviceSelection: boolean[],
-  style: string,
+  badgeStyle: string,
   handleRepositoryChange: (event: InputEvent) => void,
   handleServiceToggle: (index: number) => (event: InputEvent) => void,
   handleStyleChange: (event: InputEvent, style: string) => void,
@@ -35,7 +35,7 @@ const styles = ({ spacing }) => ({
 export const Input = ({
   repository,
   serviceSelection,
-  style,
+  badgeStyle,
   handleRepositoryChange,
   handleServiceToggle,
   handleStyleChange,
@@ -89,16 +89,16 @@ export const Input = ({
           <RadioGroup
             aria-label="Style"
             name="style"
-            value={style}
+            value={badgeStyle}
             onChange={handleStyleChange}
           >
-            {badgeStyles.map(badgeStyle => (
+            {badgeStyles.map(style => (
               <FormControlLabel
-                key={`style-${badgeStyle}`}
-                value={badgeStyle}
+                key={`style-${style}`}
+                value={style}
                 control={<Radio />}
-                label={styleName(badgeStyle)}
-                title={styleName(badgeStyle)}
+                label={styleName(style)}
+                title={styleName(style)}
               />
             ))}
           </RadioGroup>

@@ -1,500 +1,123 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Output when services are empty renders 1`] = `
-Array [
-  <h2
-    className="MuiTypography-root-7 MuiTypography-h6-24 Output-subtitle-1"
+exports[`Output when services are empty renders its components 1`] = `
+<React.Fragment>
+  <WithStyles(Typography)
+    className=""
+    headlineMapping={
+      Object {
+        "h6": "h2",
+      }
+    }
+    variant="h6"
   >
     Preview
-  </h2>,
+  </WithStyles(Typography)>
   <p
-    className="Output-badges-2"
-  />,
-  <h2
-    className="MuiTypography-root-7 MuiTypography-h6-24 Output-subtitle-1"
+    className=""
+  />
+  <WithStyles(Typography)
+    className=""
+    headlineMapping={
+      Object {
+        "h6": "h2",
+      }
+    }
+    variant="h6"
   >
     Source code
-  </h2>,
+  </WithStyles(Typography)>
   <form
     autoComplete="off"
-    className="Output-formats-4"
+    className=""
     noValidate={true}
   >
-    <div
+    <RadioGroup
       aria-label="Format"
-      className="MuiFormGroup-root-42 Output-radioGroup-5"
-      role="radiogroup"
+      className=""
+      onChange={[Function]}
+      value="2"
     >
-      <label
-        className="MuiFormControlLabel-root-44"
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="URL"
         title="URL"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="0"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          URL
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="0"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Image URL"
         title="Image URL"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="1"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Image URL
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="1"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Markdown"
         title="Markdown"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54 MuiPrivateSwitchBase-checked-56 MuiRadio-checked-51"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={true}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="2"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Markdown
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="2"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Org Mode"
         title="Org Mode"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="3"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Org Mode
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="3"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Textile"
         title="Textile"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="4"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Textile
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="4"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Rdoc"
         title="Rdoc"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="5"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Rdoc
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="5"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="AsciiDoc"
         title="AsciiDoc"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="6"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          AsciiDoc
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="6"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="RST"
         title="RST"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="7"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          RST
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="7"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Pod"
         title="Pod"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="8"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Pod
-        </span>
-      </label>
-    </div>
-  </form>,
+        value="8"
+      />
+    </RadioGroup>
+  </form>
   <pre
-    className="Output-code-6"
-  />,
-]
+    className=""
+  />
+</React.Fragment>
 `;
 
-exports[`Output when services are set renders 1`] = `
-Array [
-  <h2
-    className="MuiTypography-root-7 MuiTypography-h6-24 Output-subtitle-1"
+exports[`Output when services are set renders its components 1`] = `
+<React.Fragment>
+  <WithStyles(Typography)
+    className=""
+    headlineMapping={
+      Object {
+        "h6": "h2",
+      }
+    }
+    variant="h6"
   >
     Preview
-  </h2>,
+  </WithStyles(Typography)>
   <p
-    className="Output-badges-2"
+    className=""
   >
     <a
-      className="Output-badge-3"
+      className=""
       href="https://github.com/REPOSITORY"
       title="Build Status"
     >
@@ -504,7 +127,7 @@ Array [
       />
     </a>
     <a
-      className="Output-badge-3"
+      className=""
       href="https://travis-ci.org/REPOSITORY"
       title="Build Status"
     >
@@ -513,481 +136,92 @@ Array [
         src="https://img.shields.io/travis/REPOSITORY/master.svg?style=STYLE"
       />
     </a>
-  </p>,
-  <h2
-    className="MuiTypography-root-7 MuiTypography-h6-24 Output-subtitle-1"
+  </p>
+  <WithStyles(Typography)
+    className=""
+    headlineMapping={
+      Object {
+        "h6": "h2",
+      }
+    }
+    variant="h6"
   >
     Source code
-  </h2>,
+  </WithStyles(Typography)>
   <form
     autoComplete="off"
-    className="Output-formats-4"
+    className=""
     noValidate={true}
   >
-    <div
+    <RadioGroup
       aria-label="Format"
-      className="MuiFormGroup-root-42 Output-radioGroup-5"
-      role="radiogroup"
+      className=""
+      onChange={[Function]}
+      value="2"
     >
-      <label
-        className="MuiFormControlLabel-root-44"
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="URL"
         title="URL"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="0"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          URL
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="0"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Image URL"
         title="Image URL"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="1"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Image URL
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="1"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Markdown"
         title="Markdown"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54 MuiPrivateSwitchBase-checked-56 MuiRadio-checked-51"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={true}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="2"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Markdown
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="2"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Org Mode"
         title="Org Mode"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="3"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Org Mode
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="3"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Textile"
         title="Textile"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="4"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Textile
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="4"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Rdoc"
         title="Rdoc"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="5"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Rdoc
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="5"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="AsciiDoc"
         title="AsciiDoc"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="6"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          AsciiDoc
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="6"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="RST"
         title="RST"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="7"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          RST
-        </span>
-      </label>
-      <label
-        className="MuiFormControlLabel-root-44"
+        value="7"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        label="Pod"
         title="Pod"
-      >
-        <span
-          className="MuiButtonBase-root-65 MuiIconButton-root-59 MuiPrivateSwitchBase-root-55 MuiRadio-root-50 MuiRadio-colorSecondary-54"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="MuiIconButton-label-64"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-68"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-              />
-            </svg>
-            <input
-              checked={false}
-              className="MuiPrivateSwitchBase-input-58"
-              onChange={[Function]}
-              type="radio"
-              value="8"
-            />
-          </span>
-          <span
-            className="MuiTouchRipple-root-77"
-          />
-        </span>
-        <span
-          className="MuiTypography-root-7 MuiTypography-body1-16 MuiFormControlLabel-label-49"
-        >
-          Pod
-        </span>
-      </label>
-    </div>
-  </form>,
+        value="8"
+      />
+    </RadioGroup>
+  </form>
   <pre
-    className="Output-code-6"
+    className=""
   >
     [![Build Status](https://img.shields.io/github/stars/REPOSITORY.svg?style=STYLE)](https://github.com/REPOSITORY)
 
     [![Build Status](https://img.shields.io/travis/REPOSITORY/master.svg?style=STYLE)](https://travis-ci.org/REPOSITORY)
 
-  </pre>,
-]
+  </pre>
+</React.Fragment>
 `;

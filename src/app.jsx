@@ -84,7 +84,7 @@ export class App extends Component<AppProps, AppState> {
           <InputWithStyle
             repository={repository}
             serviceSelection={serviceSelection}
-            style={style}
+            badgeStyle={style}
             handleRepositoryChange={this.handleRepositoryChange}
             handleServiceToggle={this.handleServiceToggle}
             handleStyleChange={this.handleStyleChange}

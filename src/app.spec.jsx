@@ -1,8 +1,9 @@
 // @flow
 
 import React from 'react';
-import * as TestRenderer from 'react-test-renderer';
 import ReactDOM from 'react-dom';
+import * as TestRenderer from 'react-test-renderer';
+import ShallowTestRenderer from 'react-test-renderer/shallow';
 import AppWithStyle, { App } from './app';
 import { Input } from './input';
 import { Output } from './output';
@@ -17,9 +18,10 @@ describe('App', () => {
       ReactDOM.unmountComponentAtNode(div);
     });
 
-    it('renders component tree', () => {
-      const renderer = TestRenderer.create(<AppWithStyle />);
-      expect(renderer.toJSON()).toMatchSnapshot();
+    it('renders its components', () => {
+      const renderer = new ShallowTestRenderer();
+      renderer.render(<App classes={{ container: '', paper: '' }} />);
+      expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('renders <Input> component', () => {

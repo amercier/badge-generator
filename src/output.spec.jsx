@@ -1,48 +1,90 @@
 // @flow
 
 import React from 'react';
-import TestRenderer from 'react-test-renderer';
+import ReactDOM from 'react-dom';
+import * as TestRenderer from 'react-test-renderer';
+import ShallowTestRenderer from 'react-test-renderer/shallow';
 import OutputWithStyle, { Output } from './output';
 import { findByType } from './testHelpers';
 
+const classesMock = {
+  subtitle: '',
+  badges: '',
+  badge: '',
+  formats: '',
+  radioGroup: '',
+  code: '',
+};
+
 describe('Output', () => {
   describe('when services are empty', () => {
-    it('renders', () => {
-      const component = TestRenderer.create(
+    it('renders without crashing', () => {
+      const div = document.createElement('div');
+      ReactDOM.render(
         <OutputWithStyle
           services={[]}
           badgeStyle="STYLE"
           repository="REPOSITORY"
         />,
+        div,
       );
-      expect(component.toJSON()).toMatchSnapshot();
+      ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it('renders its components', () => {
+      const renderer = new ShallowTestRenderer();
+      renderer.render(
+        <Output
+          services={[]}
+          badgeStyle="STYLE"
+          repository="REPOSITORY"
+          classes={classesMock}
+        />,
+      );
+      expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
   });
 
   describe('when services are set', () => {
-    it('renders', () => {
-      const services = [
-        {
-          name: 'GitHub stars',
-          url: 'https://github.com/{repository}',
-          imageUrl: 'https://img.shields.io/github/stars/{repository}.svg',
-          title: 'Build Status',
-        },
-        {
-          name: 'Travis CI',
-          url: 'https://travis-ci.org/{repository}',
-          imageUrl: 'https://img.shields.io/travis/{repository}/{branch}.svg',
-          title: 'Build Status',
-        },
-      ];
-      const component = TestRenderer.create(
+    const services = [
+      {
+        name: 'GitHub stars',
+        url: 'https://github.com/{repository}',
+        imageUrl: 'https://img.shields.io/github/stars/{repository}.svg',
+        title: 'Build Status',
+      },
+      {
+        name: 'Travis CI',
+        url: 'https://travis-ci.org/{repository}',
+        imageUrl: 'https://img.shields.io/travis/{repository}/{branch}.svg',
+        title: 'Build Status',
+      },
+    ];
+
+    it('renders without crashing', () => {
+      const div = document.createElement('div');
+      ReactDOM.render(
         <OutputWithStyle
           services={services}
           badgeStyle="STYLE"
           repository="REPOSITORY"
         />,
+        div,
       );
-      expect(component.toJSON()).toMatchSnapshot();
+      ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it('renders its components', () => {
+      const renderer = new ShallowTestRenderer();
+      renderer.render(
+        <Output
+          services={services}
+          badgeStyle="STYLE"
+          repository="REPOSITORY"
+          classes={classesMock}
+        />,
+      );
+      expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
   });
 
