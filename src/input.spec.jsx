@@ -45,7 +45,7 @@ describe('Input', () => {
     expect(renderer.getRenderOutput()).toMatchSnapshot();
   });
 
-  it('calls handleRepositoryChange when respository changes', () => {
+  it('calls handleRepositoryChange when repository changes', () => {
     const handleRepositoryChangeMock = jest.fn();
     const input = mount(
       <InputWithStyle
@@ -86,7 +86,7 @@ describe('Input', () => {
     });
   });
 
-  it('calls handleStyleChange when respository changes', () => {
+  it('calls handleStyleChange when repository changes', () => {
     const handleStyleChangeMock = jest.fn();
     const input = mount(
       <InputWithStyle
