@@ -1,35 +1,56 @@
 // @flow
 
 import React from 'react';
-import renderer from 'react-test-renderer';
+import ReactDOM from 'react-dom';
+import ShallowTestRenderer from 'react-test-renderer/shallow';
 import { mount } from 'enzyme';
-import InputWithStyle from './input';
+import InputWithStyle, { Input } from './input';
 import { type Service, services, styles } from './config';
 
 const noop = () => {};
 const serviceSelection = services.map((service, index) => !!(index % 2));
 
 describe('Input', () => {
-  it('renders', () => {
-    const component = renderer.create(
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(
       <InputWithStyle
         repository="REPOSITORY"
-        style={styles[0]}
+        badgeStyle="STYLE"
         serviceSelection={serviceSelection}
         handleRepositoryChange={noop}
-        handleServiceToggle={noop}
+        handleServiceToggle={() => noop}
         handleStyleChange={noop}
       />,
+      div,
     );
-    expect(component.toJSON()).toMatchSnapshot();
+    ReactDOM.unmountComponentAtNode(div);
   });
 
-  it('calls handleRepositoryChange when respository changes', () => {
+  it('renders its components', () => {
+    const renderer = new ShallowTestRenderer();
+    renderer.render(
+      <Input
+        repository="REPOSITORY"
+        badgeStyle={styles[0]}
+        serviceSelection={serviceSelection}
+        handleRepositoryChange={noop}
+        handleServiceToggle={() => noop}
+        handleStyleChange={noop}
+        classes={{
+          gridItem: '',
+        }}
+      />,
+    );
+    expect(renderer.getRenderOutput()).toMatchSnapshot();
+  });
+
+  it('calls handleRepositoryChange when repository changes', () => {
     const handleRepositoryChangeMock = jest.fn();
     const input = mount(
       <InputWithStyle
         repository="REPOSITORY"
-        style={styles[0]}
+        badgeStyle={styles[0]}
         serviceSelection={serviceSelection}
         handleRepositoryChange={handleRepositoryChangeMock}
         handleServiceToggle={noop}
@@ -47,7 +68,7 @@ describe('Input', () => {
     const input = mount(
       <InputWithStyle
         repository="REPOSITORY"
-        style={styles[0]}
+        badgeStyle={styles[0]}
         serviceSelection={serviceSelection}
         handleRepositoryChange={noop}
         handleServiceToggle={index => handleServiceToggleMocks[index]}
@@ -65,12 +86,12 @@ describe('Input', () => {
     });
   });
 
-  it('calls handleStyleChange when respository changes', () => {
+  it('calls handleStyleChange when repository changes', () => {
     const handleStyleChangeMock = jest.fn();
     const input = mount(
       <InputWithStyle
         repository="REPOSITORY"
-        style={styles[0]}
+        badgeStyle={styles[0]}
         serviceSelection={serviceSelection}
         handleRepositoryChange={noop}
         handleServiceToggle={noop}
