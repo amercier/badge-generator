@@ -3233,9 +3233,10 @@ eslint-config-airbnb@^17.1.0:
     object.assign "^4.1.0"
     object.entries "^1.0.4"
 
-eslint-config-flowtype-strict@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-flowtype-strict/-/eslint-config-flowtype-strict-0.1.0.tgz#ccf4e693f5b13e639c02097bef3f81d3e5593791"
+eslint-config-flowtype-strict@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-flowtype-strict/-/eslint-config-flowtype-strict-0.2.0.tgz#3aff10d7fd23aa266c8c2917acf5cbfb3a5c9b19"
+  integrity sha512-EzkhXYTmg6xM1mfbMykfk1byugCQNtcnuWXXjlzvoIEIwKyRvtkRfSmKEaVSBHxaKk3U/qbS9m0+4ynRIc59VQ==
 
 eslint-config-prettier@^3.3.0:
   version "3.3.0"
