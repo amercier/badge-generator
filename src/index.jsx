@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import AppWithStyle from './app';
 import * as serviceWorker from './serviceWorker';
 
-const root = document.getElementById('root');
+const root = document.querySelector('#root');
 if (root !== null) {
   ReactDOM.render(<AppWithStyle />, root);
 }
