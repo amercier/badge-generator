@@ -2096,6 +2096,11 @@ ci-info@^1.5.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.6.0.tgz#2ca20dbb9ceb32d4524a683303313f0304b1e497"
 
+ci-info@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
+  integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
+
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/cipher-base/-/cipher-base-1.0.4.tgz#8760e4ecc272f4c363532f926d874aae2c1397de"
@@ -4662,12 +4667,13 @@ ieee754@^1.1.4:
   version "1.1.12"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.12.tgz#50bf24e5b9c8bb98af4964c941cdb0918da7b60b"
 
-if-ci@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/if-ci/-/if-ci-2.0.2.tgz#5c79b5f7f13973b991e6549ee290803c4330a2f5"
+if-ci@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/if-ci/-/if-ci-3.0.0.tgz#ad72696d5fd3f5c6a6e7e8bb51133de23eaca110"
+  integrity sha512-/0vPNr5ZDR3znyP83SFMqe6oUVeiAeGt5QnPanVJjPGH7Z7JrZnYUEt7gpkK7C8NTIH5BLSqnA5IPdUnYof6pA==
   dependencies:
-    execa "^0.7.0"
-    is-ci "^1.0.10"
+    execa "^1.0.0"
+    is-ci "^2.0.0"
 
 iferr@^0.1.5:
   version "0.1.5"
@@ -4895,6 +4901,13 @@ is-ci@^1.0.10, is-ci@^1.2.1:
   resolved "https://registry.yarnpkg.com/is-ci/-/is-ci-1.2.1.tgz#e3779c8ee17fccf428488f6e281187f2e632841c"
   dependencies:
     ci-info "^1.5.0"
+
+is-ci@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/is-ci/-/is-ci-2.0.0.tgz#6bc6334181810e04b5c22b3d589fdca55026404c"
+  integrity sha512-YfJT7rkpQB0updsdHLGWrvhBJfcfzNNawYDNIyQXJz0IViGf75O8EBPKSdvw2rF+LGCsX4FZ8tcr3b19LcZq4w==
+  dependencies:
+    ci-info "^2.0.0"
 
 is-color-stop@^1.0.0:
   version "1.1.0"
