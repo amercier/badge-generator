@@ -4,7 +4,7 @@ exports[`App when repository is not set and services are not checked renders <In
 Object {
   "badgeStyle": "default",
   "classes": Object {
-    "gridItem": "Input-gridItem-335",
+    "gridItem": "Input-gridItem-337",
   },
   "handleRepositoryChange": [Function],
   "handleServiceToggle": [Function],
@@ -109,12 +109,12 @@ exports[`App when repository is set and services are checked renders <Output> co
 Object {
   "badgeStyle": "default",
   "classes": Object {
-    "badge": "Output-badge-543",
-    "badges": "Output-badges-542",
-    "code": "Output-code-546",
-    "formats": "Output-formats-544",
-    "radioGroup": "Output-radioGroup-545",
-    "subtitle": "Output-subtitle-541",
+    "badge": "Output-badge-545",
+    "badges": "Output-badges-544",
+    "code": "Output-code-548",
+    "formats": "Output-formats-546",
+    "radioGroup": "Output-radioGroup-547",
+    "subtitle": "Output-subtitle-543",
   },
   "repository": "REPOSITORY",
   "services": Array [
@@ -294,7 +294,7 @@ exports[`App when repository is set and services are checked updates <Input> com
 Object {
   "badgeStyle": "default",
   "classes": Object {
-    "gridItem": "Input-gridItem-335",
+    "gridItem": "Input-gridItem-337",
   },
   "handleRepositoryChange": [Function],
   "handleServiceToggle": [Function],
