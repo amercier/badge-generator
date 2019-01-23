@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import { mount } from 'enzyme';
-import InputWithStyle, { Input } from './input';
+import InputWithStyle, { Input } from './Input';
 import { type Service, services, styles } from './config';
 
 const noop = () => {};

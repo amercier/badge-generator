@@ -4,9 +4,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as TestRenderer from 'react-test-renderer';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
-import AppWithStyle, { App } from './app';
-import { Input } from './input';
-import { Output } from './output';
+import AppWithStyle, { App } from './App';
+import { Input } from './Input';
+import { Output } from './Output';
 import { services } from './config';
 import { findByType } from './testHelpers';
 
