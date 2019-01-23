@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppWithStyle from './app';
+import AppWithStyle from './App';
 import * as serviceWorker from './serviceWorker';
 
 const root = document.querySelector('#root');

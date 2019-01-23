@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as TestRenderer from 'react-test-renderer';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
-import OutputWithStyle, { Output } from './output';
+import OutputWithStyle, { Output } from './Output';
 import { findByType } from './testHelpers';
 
 const classesMock = {

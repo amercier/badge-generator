@@ -7,8 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import { type Service, services, styles as badgeStyles } from './config';
 import { type InputEvent } from './util';
-import InputWithStyle from './input';
-import OutputWithStyle from './output';
+import InputWithStyle from './Input';
+import OutputWithStyle from './Output';
 
 type AppProps = {|
   classes: {
