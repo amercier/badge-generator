@@ -7,24 +7,34 @@ import { mount } from 'enzyme';
 import InputWithStyle, { Input } from './Input';
 import { type Service, services, styles } from './config';
 
+/**
+ * No operation.
+ *
+ * @returns {undefined} Nothing.
+ */
 const noop = () => {};
+
 const serviceSelection = services.map((service, index) => !!(index % 2));
 
 describe('Input', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(
-      <InputWithStyle
-        repository="REPOSITORY"
-        badgeStyle="STYLE"
-        serviceSelection={serviceSelection}
-        handleRepositoryChange={noop}
-        handleServiceToggle={() => noop}
-        handleStyleChange={noop}
-      />,
-      div,
-    );
-    ReactDOM.unmountComponentAtNode(div);
+    expect(() => {
+      ReactDOM.render(
+        <InputWithStyle
+          repository="REPOSITORY"
+          badgeStyle="STYLE"
+          serviceSelection={serviceSelection}
+          handleRepositoryChange={noop}
+          handleServiceToggle={() => noop}
+          handleStyleChange={noop}
+        />,
+        div,
+      );
+    }).not.toThrow();
+    expect(() => {
+      ReactDOM.unmountComponentAtNode(div);
+    }).not.toThrow();
   });
 
   it('renders its components', () => {

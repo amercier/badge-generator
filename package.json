@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.0",
+    "eslint-config-amercier": "^0.2.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
@@ -11,15 +12,6 @@
     "cross-env": "^5.2.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-flowtype-strict": "^0.2.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-flowtype": "^3.2.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-unicorn": "^7.0.0",
     "flow-bin": "^0.91.0",
     "flow-typed": "^2.5.1",
     "husky": "^1.3.0",
@@ -68,97 +60,12 @@
   },
   "eslintConfig": {
     "extends": [
-      "airbnb",
-      "flowtype-strict",
-      "plugin:react/recommended",
-      "plugin:unicorn/recommended",
-      "plugin:prettier/recommended",
-      "prettier",
-      "prettier/flowtype",
-      "prettier/react",
-      "prettier/unicorn"
+      "amercier/create-react-app",
+      "amercier/with/flowtype"
     ],
-    "parser": "babel-eslint",
-    "env": {
-      "browser": true,
-      "node": false
-    },
-    "settings": {
-      "flowtype": {
-        "onlyFilesWithFlowAnnotation": true
-      }
-    },
     "rules": {
-      "unicorn/filename-case": [
-        "error",
-        {
-          "case": "camelCase"
-        }
-      ],
-      "react/require-default-props": [
-        "error",
-        {
-          "forbidDefaultForRequired": false
-        }
-      ],
-      "react/default-props-match-prop-types": [
-        "error",
-        {
-          "allowRequiredDefaults": true
-        }
-      ]
-    },
-    "overrides": [
-      {
-        "files": [
-          "src/**/*.js"
-        ],
-        "rules": {
-          "import/prefer-default-export": "off",
-          "import/no-default-export": "error"
-        }
-      },
-      {
-        "files": [
-          "src/**/*.jsx"
-        ],
-        "rules": {
-          "unicorn/filename-case": [
-            "error",
-            {
-              "case": "pascalCase"
-            }
-          ]
-        }
-      },
-      {
-        "files": [
-          "src/**/*.spec.jsx",
-          "src/**/index.jsx"
-        ],
-        "rules": {
-          "unicorn/filename-case": "off"
-        }
-      },
-      {
-        "files": [
-          "integration/**",
-          "src/**/*.spec.*",
-          "src/setupTests.js"
-        ],
-        "env": {
-          "jest": true
-        },
-        "rules": {
-          "import/no-extraneous-dependencies": [
-            "error",
-            {
-              "devDependencies": true
-            }
-          ]
-        }
-      }
-    ]
+      "jsdoc/require-example": "off"
+    }
   },
   "browserslist": [
     ">0.2%",

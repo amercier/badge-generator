@@ -15,3 +15,5 @@ module.exports = {
     debug: true,
   },
 };
+
+/* eslint-enable unicorn/filename-case */

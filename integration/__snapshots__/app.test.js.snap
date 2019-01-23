@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App Setting repository and enabling some services 1`] = `
+exports[`App setting repository and enabling some services 1`] = `
 "[![Build Status](https://img.shields.io/travis/amercier/badge-generator/master.svg)](https://travis-ci.org/amercier/badge-generator)
 [![Test Coverage](https://img.shields.io/codecov/c/github/amercier/badge-generator/master.svg)](https://codecov.io/github/amercier/badge-generator?branch=master)
 [![Dependency Status](https://img.shields.io/david/amercier/badge-generator.svg)](https://david-dm.org/amercier/badge-generator)
@@ -8,7 +8,7 @@ exports[`App Setting repository and enabling some services 1`] = `
 "
 `;
 
-exports[`App Setting repository and enabling some services 2`] = `
+exports[`App setting repository and enabling some services 2`] = `
 "[![Build Status](https://img.shields.io/travis/amercier/badge-generator/master.svg?style=flat-square)](https://travis-ci.org/amercier/badge-generator)
 [![Test Coverage](https://img.shields.io/codecov/c/github/amercier/badge-generator/master.svg?style=flat-square)](https://codecov.io/github/amercier/badge-generator?branch=master)
 [![Dependency Status](https://img.shields.io/david/amercier/badge-generator.svg?style=flat-square)](https://david-dm.org/amercier/badge-generator)
