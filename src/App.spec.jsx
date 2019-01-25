@@ -14,8 +14,12 @@ describe('App', () => {
   describe('when repository is not set and services are not checked', () => {
     it('renders without crashing', () => {
       const div = document.createElement('div');
-      ReactDOM.render(<AppWithStyle />, div);
-      ReactDOM.unmountComponentAtNode(div);
+      expect(() => {
+        ReactDOM.render(<AppWithStyle />, div);
+      }).not.toThrow();
+      expect(() => {
+        ReactDOM.unmountComponentAtNode(div);
+      }).not.toThrow();
     });
 
     it('renders its components', () => {
@@ -31,7 +35,7 @@ describe('App', () => {
 
     it('does not render <Output> component', () => {
       const renderer = TestRenderer.create(<AppWithStyle />);
-      expect(renderer.root.findAllByType(Output).length).toBe(0);
+      expect(renderer.root.findAllByType(Output)).toHaveLength(0);
     });
   });
 

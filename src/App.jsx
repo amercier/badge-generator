@@ -23,6 +23,12 @@ type AppState = {|
   serviceSelection: boolean[],
 |};
 
+/**
+ * App styles.
+ *
+ * @param {Object} theme - Material UI Theme object.
+ * @returns {Object} Styles object.
+ */
 const styles = ({ spacing, typography }) => ({
   container: {
     width: '100%',
@@ -43,22 +49,45 @@ const styles = ({ spacing, typography }) => ({
   },
 });
 
+/**
+ * Main application component.
+ */
 export class App extends Component<AppProps, AppState> {
+  /**
+   * Component state.
+   *
+   * @type {Object}
+   */
   state = {
     repository: '',
     style: badgeStyles[0],
     serviceSelection: services.map(badgeService => !!badgeService.enabled),
   };
 
+  /**
+   * @returns {Service[]} All checked services.
+   */
   get enabledServices(): Service[] {
     const { serviceSelection } = this.state;
     return services.filter((service, index) => serviceSelection[index]);
   }
 
+  /**
+   * Function called whenever the repository has changed.
+   *
+   * @param {InputEvent} event - The <input> event.
+   * @returns {undefined} Nothing.
+   */
   handleRepositoryChange = (event: InputEvent) => {
     this.setState({ repository: event.target.value });
   };
 
+  /**
+   * Get a function that will be called whenever the a service is checked.
+   *
+   * @param {number} index - The service index.
+   * @returns {Function} The function called whenever the service has changed.
+   */
   handleServiceToggle = (index: number) => (event: InputEvent) => {
     const { serviceSelection } = this.state;
     const updatedSelection = [...serviceSelection];
@@ -66,10 +95,22 @@ export class App extends Component<AppProps, AppState> {
     this.setState({ serviceSelection: updatedSelection });
   };
 
+  /**
+   * Function called whenever the style has changed.
+   *
+   * @param {InputEvent} event - The <input> event.
+   * @param {string} style - The new style.
+   * @returns {undefined} Nothing.
+   */
   handleStyleChange = (event: InputEvent, style: string) => {
     this.setState({ style });
   };
 
+  /**
+   * Render the component.
+   *
+   * @returns {React.Element} The rendered element.
+   */
   render() {
     const { classes } = this.props;
     const { repository, serviceSelection, style } = this.state;

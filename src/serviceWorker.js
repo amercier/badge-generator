@@ -1,5 +1,5 @@
-/* global process */
-/* eslint-disable no-console */
+/* eslint-disable no-console, more/no-then, require-jsdoc */
+// TODO Rewrite service worker registration
 
 // This optional code is used to register a service worker.
 // register() is not called by default.
@@ -137,3 +137,5 @@ export function unregister() {
     });
   }
 }
+
+/* eslint-enable no-console, more/no-then, require-jsdoc */

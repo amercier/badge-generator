@@ -2,11 +2,11 @@ import { formats } from './config';
 
 describe('formats', () => {
   it('contains 9 formats', () => {
-    expect(formats.length).toBe(9);
+    expect(formats).toHaveLength(9);
   });
 
   it('contains 1 default format', () => {
-    expect(formats.filter(f => f.default).length).toBe(1);
+    expect(formats.filter(f => f.default)).toHaveLength(1);
   });
 
   formats.forEach(({ name, template }) => {

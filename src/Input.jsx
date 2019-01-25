@@ -25,6 +25,12 @@ type InputProps = {|
   },
 |};
 
+/**
+ * Input styles.
+ *
+ * @param {Object} theme - Material UI Theme object.
+ * @returns {Object} Styles object.
+ */
 const styles = ({ spacing }) => ({
   gridItem: {
     marginTop: 2 * spacing.unit,
@@ -32,6 +38,13 @@ const styles = ({ spacing }) => ({
   },
 });
 
+/**
+ * Input controls, including: a repository text field, a list of services checkboxes, and a radio
+ * list for style.
+ *
+ * @param {InputProps} props - Component properties.
+ * @returns {React.Element} The rendered element.
+ */
 export const Input = ({
   repository,
   serviceSelection,

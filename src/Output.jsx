@@ -7,7 +7,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import { type Service, type Format, formats } from './config';
-import { type InputEvent } from './util';
+import { type InputEvent, nameToKey } from './util';
 
 type OutputProps = {|
   services: Service[],
@@ -27,6 +27,12 @@ type OutputState = {|
   formatIndex: number,
 |};
 
+/**
+ * Output styles.
+ *
+ * @param {Object} theme - Material UI Theme object.
+ * @returns {Object} Styles object.
+ */
 const styles = ({ spacing, typography }) => ({
   subtitle: {
     marginTop: 2 * spacing.unit,
@@ -52,24 +58,44 @@ const styles = ({ spacing, typography }) => ({
   },
 });
 
-function formatUrl(url: string, repository: string, branch: string) {
-  return url.replace('{repository}', repository).replace('{branch}', branch);
+/**
+ * Format an URL.
+ *
+ * @param {string} urlTemplate - The URL template.
+ * @param {string} repository - The repository.
+ * @param {string} branch - The branch.
+ * @returns {string} The URL template with `{repository}` and `{branch}` replaced by their value.
+ */
+function formatUrl(urlTemplate: string, repository: string, branch: string) {
+  return urlTemplate
+    .replace('{repository}', repository)
+    .replace('{branch}', branch);
 }
 
-function nameToKey(name: string) {
-  return name.replace(/ /g, '-').toLowerCase();
-}
-
+/**
+ * Output containing the preview badges, source code, and a format switch.
+ */
 export class Output extends Component<OutputProps, OutputState> {
+  /**
+   * Component state.
+   *
+   * @type {Object}
+   */
   state = {
     formatIndex: formats.findIndex(f => f.default) || 0,
   };
 
+  /**
+   * @returns {Format} The currently selected format.
+   */
   get format(): Format {
     const { formatIndex } = this.state;
     return formats[formatIndex];
   }
 
+  /**
+   * @returns {Service[]} The currently selected services.
+   */
   get formattedServices(): Service[] {
     const { services, repository, badgeStyle } = this.props;
     const branch = 'master';
@@ -81,10 +107,22 @@ export class Output extends Component<OutputProps, OutputState> {
     }));
   }
 
+  /**
+   * Function called whenever the format changes.
+   *
+   * @param {InputEvent} event - The <input> event.
+   * @param {string} value - The new format index.
+   * @returns {undefined} Nothing.
+   */
   handleFormatChange = (event: InputEvent, value: string) => {
     this.setState({ formatIndex: +value });
   };
 
+  /**
+   * Render the component.
+   *
+   * @returns {React.Element} The rendered element.
+   */
   render() {
     const { classes } = this.props;
     const { formatIndex } = this.state;

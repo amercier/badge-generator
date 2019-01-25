@@ -20,15 +20,19 @@ describe('Output', () => {
   describe('when services are empty', () => {
     it('renders without crashing', () => {
       const div = document.createElement('div');
-      ReactDOM.render(
-        <OutputWithStyle
-          services={[]}
-          badgeStyle="STYLE"
-          repository="REPOSITORY"
-        />,
-        div,
-      );
-      ReactDOM.unmountComponentAtNode(div);
+      expect(() => {
+        ReactDOM.render(
+          <OutputWithStyle
+            services={[]}
+            badgeStyle="STYLE"
+            repository="REPOSITORY"
+          />,
+          div,
+        );
+      }).not.toThrow();
+      expect(() => {
+        ReactDOM.unmountComponentAtNode(div);
+      }).not.toThrow();
     });
 
     it('renders its components', () => {
@@ -63,15 +67,19 @@ describe('Output', () => {
 
     it('renders without crashing', () => {
       const div = document.createElement('div');
-      ReactDOM.render(
-        <OutputWithStyle
-          services={services}
-          badgeStyle="STYLE"
-          repository="REPOSITORY"
-        />,
-        div,
-      );
-      ReactDOM.unmountComponentAtNode(div);
+      expect(() => {
+        ReactDOM.render(
+          <OutputWithStyle
+            services={services}
+            badgeStyle="STYLE"
+            repository="REPOSITORY"
+          />,
+          div,
+        );
+      }).not.toThrow();
+      expect(() => {
+        ReactDOM.unmountComponentAtNode(div);
+      }).not.toThrow();
     });
 
     it('renders its components', () => {
