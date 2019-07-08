@@ -1,0 +1,26 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - eslint-config-amercier > eslint-plugin-import > lodash:
+        patched: '2019-07-08T22:24:06.916Z'
+    - eslint-config-amercier > eslint-plugin-jsdoc > lodash:
+        patched: '2019-07-08T22:24:06.916Z'
+    - eslint-config-amercier > eslint-plugin-flowtype > lodash:
+        patched: '2019-07-08T22:24:06.916Z'
+    - eslint-config-amercier > @vue/eslint-config-airbnb > eslint-import-resolver-webpack > lodash:
+        patched: '2019-07-08T22:24:06.916Z'
+    - eslint-config-amercier > eslint-plugin-vue > vue-eslint-parser > lodash:
+        patched: '2019-07-08T22:24:06.916Z'
+    - eslint-config-amercier > babel-eslint > @babel/types > lodash:
+        patched: '2019-07-08T22:24:06.916Z'
+    - eslint-config-amercier > @vue/eslint-config-airbnb > eslint-plugin-import > lodash:
+        patched: '2019-07-08T22:24:06.916Z'
+    - eslint-config-amercier > babel-eslint > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-08T22:24:06.916Z'
+    - eslint-config-amercier > babel-eslint > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-08T22:24:06.916Z'
+    - eslint-config-amercier > babel-eslint > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-08T22:24:06.916Z'
