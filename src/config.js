@@ -188,6 +188,12 @@ export const services: Service[] = [
     imageUrl: 'http://melpa.org/packages/{repository}-badge.svg',
     title: 'MELPA',
   },
+  {
+    name: 'Gitlab Pipeline',
+    url: 'https://gitlab.com/{repository}',
+    imageUrl: 'https://img.shields.io/gitlab/pipeline/{repository}.svg',
+    title: 'Build Status',
+  },
 ];
 
 export const formats: Format[] = [
