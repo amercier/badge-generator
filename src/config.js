@@ -190,7 +190,7 @@ export const services: Service[] = [
   },
   {
     name: 'GitLab Pipeline',
-    url: 'https://gitlab.com/{repository}',
+    url: 'https://gitlab.com/{repository}/pipelines',
     imageUrl: 'https://img.shields.io/gitlab/pipeline/{repository}.svg',
     title: 'Build Status',
   },
