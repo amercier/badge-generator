@@ -14,7 +14,7 @@
     "enzyme-adapter-react-16": "^1.7.1",
     "flow-bin": "^0.95.0",
     "flow-typed": "^2.5.1",
-    "husky": "^2.0.0",
+    "husky": "^3.0.8",
     "if-ci": "^3.0.0",
     "jest-extended": "^0.11.0",
     "jest-puppeteer": "^3.7.0",
