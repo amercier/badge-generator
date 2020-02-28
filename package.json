@@ -23,7 +23,7 @@
     "prettier": "^1.15.3",
     "puppeteer": "^1.11.0",
     "react-scripts": "^2.1.1",
-    "react-test-renderer": "^16.6.3"
+    "react-test-renderer": "^16.13.0"
   },
   "peerDependencies": {
     "jest": "^23.6.0"
