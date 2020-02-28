@@ -4,7 +4,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.0",
     "eslint-config-amercier": "^0.3.0",
-    "react": "^16.6.3",
+    "react": "16.12.0",
     "react-dom": "^16.6.3"
   },
   "devDependencies": {
