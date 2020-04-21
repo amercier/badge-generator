@@ -10,7 +10,7 @@
   "devDependencies": {
     "codecov": "^3.1.0",
     "cross-env": "^5.2.0",
-    "enzyme": "^3.8.0",
+    "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "flow-bin": "^0.95.0",
     "flow-typed": "^2.5.1",
