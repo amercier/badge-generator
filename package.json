@@ -11,7 +11,7 @@
     "codecov": "^3.1.0",
     "cross-env": "^5.2.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-adapter-react-16": "^1.15.2",
     "flow-bin": "^0.95.0",
     "flow-typed": "^2.5.1",
     "husky": "^2.0.0",
