@@ -5,7 +5,8 @@
     "@material-ui/core": "^3.9.0",
     "eslint-config-amercier": "^0.3.0",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "codecov": "^3.1.0",
@@ -38,7 +39,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test-integration": "jest -c integration/jest.config.js",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "lint-staged": {
     "*": [
@@ -82,5 +85,6 @@
       "!src/setupTests.js",
       "!src/testHelpers.js"
     ]
-  }
+  },
+  "snyk": true
 }
