@@ -34,6 +34,42 @@ export const services: Service[] = [
     title: 'License',
   },
   {
+    name: 'GitHub lines of code',
+    url: 'https://github.com/{repository}/graphs/contributors',
+    imageUrl: 'https://img.shields.io/tokei/lines/github/{repository}.svg',
+    title: 'Activity'
+  },
+  {
+    name: 'GitHub contributors',
+    url: 'https://github.com/{repository}/graphs/contributors',
+    imageUrl: 'https://img.shields.io/github/contributors/{repository}.svg',
+    title: 'Activity'
+  },
+  {
+    name: 'GitHub last commit',
+    url: 'https://github.com/{repository}/commits',
+    imageUrl: 'https://img.shields.io/github/last-commit/{repository}.svg',
+    title: 'Activity'
+  },
+  {
+    name: 'GitHub commit activity',
+    url: 'https://github.com/{repository}/graphs/contributors',
+    imageUrl: 'https://img.shields.io/github/commit-activity/m/{repository}.svg',
+    title: 'Activity'
+  },
+  {
+    name: 'GitHub downloads',
+    url: 'https://github.com/{repository}/releases',
+    imageUrl: 'https://img.shields.io/github/downloads/{repository}/total.svg',
+    title: 'Downloads'
+  },
+  {
+    name: 'GitHub release',
+    url: 'https://github.com/{repository}/releases',
+    imageUrl: 'https://img.shields.io/github/v/release/{repository}.svg',
+    title: 'Version'
+  },
+  {
     name: 'Travis CI',
     url: 'https://travis-ci.org/{repository}',
     imageUrl: 'https://img.shields.io/travis/{repository}/{branch}.svg',
